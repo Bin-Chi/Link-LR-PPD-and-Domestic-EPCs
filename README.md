@@ -8,7 +8,7 @@ This project is the code part of authors' article which will submit in Scientifi
 ### 1.1 Create a new PostgreSQL database
 
 
-### 1.2
+### 1.2 Set the wrking directory for R
 
 
 ## 2. Data linkage
