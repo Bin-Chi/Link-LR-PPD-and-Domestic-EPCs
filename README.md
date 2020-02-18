@@ -6,7 +6,7 @@ This project is the code part of authors' article which will submit in Scientifi
 
 
 ### 1.1 Create a new PostgreSQL database
-Create a new PostgreSQL and named as datajournal. Here we set the password of postgres user in PostgreSQL is **123456**
+Create a new PostgreSQL and named as **datajournal**. Here we set the password of postgres user in PostgreSQL is **123456**
 
 
 ### 1.2 Set the working directory for R
