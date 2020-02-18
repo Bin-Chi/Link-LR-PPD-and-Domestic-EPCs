@@ -9,7 +9,6 @@
 # Date: 19/12/2019
 
 
-
 ###clean the Land Registry PPD before the do the linkage with EPC
 
 DELETE FROM  pricepaid WHERE categorytype='B';
@@ -18,10 +17,9 @@ DELETE FROM  pricepaid WHERE categorytype='B';
 DELETE FROM  pricepaid WHERE propertytype='O';
 #Query returned successfully: 0 rows affected, 5.4 secs execution time.
 
-
-select * into tranexit from pricepaid where postcode in (select distinct postcode from epc)
+SELECT * INTO tranexit FROM pricepaid WHERE postcode IN (SELECT DISTINCT postcode FROM epc)
 ####Query returned successfully: 23999656 rows affected, 05:47 minutes execution time.
 
-select * into epcformatch from epc where  postcode in (select distinct postcode from tranexit)
+SELECT * INTO epcformatch FROM epc WHERE  postcode IN (SELECT DISTINCT postcode FROM tranexit)
 ######Query returned successfully: 17160851 rows affected, 14:01 minutes execution time.
 #### tranexit and epcformatch are used to go the linkage process
