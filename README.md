@@ -10,19 +10,18 @@ This project is the code part of authors' article which will submit in Scientifi
  
 
 
-# 3.Evaluation of the data linkage 
+# 3. Evaluation of the data linkage 
 
-# 4.Linked PPD between 2011 and 2019
+# 4. Linked PPD between 2011 and 2019
 
-# 5.Data cleaning 
+# 5. Data cleaning 
 
-# 6.User note for the linked data
+# 6. User note for the linked data
 
 
 # 7. Future research
 
 
 # 8. Acknowledgements
-
 
 The authors would like to thank David Lockett and Caroline Bray of Land Registry, who offered guidance on the Land Registry PPD. Thanks also to Jessica Williamson and Jake Mulley, who helped to transfer our questions on EPCs to the teams in MHCLG, allowing the authors to deepen their understanding of this data set at the end of this research. The authors also would like to thank Rob Liddiard of the UCL Energy Institute for sharing his expertise regarding EPC data during the earlier stages of this research.  
