@@ -35,5 +35,5 @@ COPY pricepaid1 FROM 'D:/pp-complete.csv' DELIMITERS ',' CSV QUOTE '"'
 
 ALTER TABLE pricepaid ADD yearchi int;
 
-update pricepaid set yearchi= date_part('year', dateoftransfer);
+UPDATE pricepaid SET yearchi= date_part('year', dateoftransfer)
 #Query returned successfully: 24852949 rows affected, 08:41 minutes execution time.
