@@ -8,7 +8,7 @@ This project is the code part of authors' article which will submit in Scientifi
 
 # 2. Data linkage
  
-
+![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
 
 # 3. Evaluation of the data linkage 
 
