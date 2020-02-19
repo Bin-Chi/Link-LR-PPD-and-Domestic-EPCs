@@ -16,7 +16,7 @@ Process of setting working directory is listed below:
 - Put the rulechi.csv file in the "matchcasa1" folder.
 
 
-***NOTE:*** If you do would like to follow this setting process, you need change the **setwd("D:/R/matchcasa1")** and **setwd("D:/R")** in the R code (PPD_EPC_linkage.R).
+***NOTE:*** If you would like to change your working directory, you also need to change the filepath of **setwd("D:/R/matchcasa1")** and **setwd("D:/R")** in the R code (PPD_EPC_linkage.R).
 ## 2. Data linkage
 Run the PPD_EPC_linkage.R.
 - ***casa*** is the all the linked results from the four stages matching
