@@ -23,7 +23,7 @@ Process of setting working directory is listed below:
 Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
 
 ### 1.4 Clean up Land Registry PPD in atajournal database before linkage
- Runing the **Data_cleaning1.sql** to clean up the transaction which are not sold in full market value and property type is Other.Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for linkage; and Domestic EPCs dataset with postcode in Land Registry PPD are also selected.
+ Runing the **Data_cleaning1.sql** to clean up the transaction which are not sold in full market value and property type is Other. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for linkage; and Domestic EPCs dataset with postcode in Land Registry PPD are also selected.
 
 ## 2. Data linkage
 Run the PPD_EPC_linkage.R.
