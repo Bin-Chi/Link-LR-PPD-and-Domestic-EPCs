@@ -10,7 +10,10 @@ Create a new PostgreSQL and named as **datajournal**. Here, the password of post
 
 
 ### 1.2 Set the working directory for R
-
+Process of setting working directory is listed below:
+- Create a directory named "R" in your D Device.
+- Create a sub-directory named "matchcasa1" in "R" folder. Put the rulechi.csv file in this directory 
+-
 
 ## 2. Data linkage
 Run the PPD_EPC_linkage.R.
