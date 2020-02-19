@@ -17,6 +17,14 @@ Process of setting working directory is listed below:
 
 
 ***NOTE:*** If you would like to change your working directory, you also need to change the filepath of **setwd("D:/R/matchcasa1")** and **setwd("D:/R")** in the R code (PPD_EPC_linkage.R).
+
+
+### 1.3 Read in the Land Registry PPD in datajournal database
+Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Using the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
+
+### 1.4 Clean up Land Registry PPD in atajournal database before linkage
+
+
 ## 2. Data linkage
 Run the PPD_EPC_linkage.R.
 - ***casa*** is the all the linked results from the four stages matching
