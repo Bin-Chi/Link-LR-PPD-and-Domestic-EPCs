@@ -2,7 +2,7 @@
 # Linking Land Registry Price Paid Data (PPD) and Domestic Energy Performance Certificates (EPCs)
 All matching rules were written in R with data inputs and outputs stored in a PostGIS database.
 ## 1. Getting Started
-This project is the code part of authors' article which will submit in Scientific Data, code will not open until it accepted from the data journel. The linked dataset is under review of UK Data Service.  
+This project is the code part of authors' article which will submit in Scientific Data, code will not open until it accepted from the data journel. The linked dataset is under review of UK Data Service. This research is **not** allowed used in **commercial**.
 
 
 ### 1.1 Create a new PostgreSQL database
@@ -20,19 +20,26 @@ Process of setting working directory is listed below:
 
 
 ### 1.3 Read in the Land Registry PPD in datajournal database
-Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Using the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
+Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
 
 ### 1.4 Clean up Land Registry PPD in atajournal database before linkage
-
+ Runing the **Data_cleaning1.sql** to clean up the transaction which are not sold in full market value or property type is Other. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for linkage; Domestic EPCs dataset with postcodes in Land Registry PPD are also selected.
 
 ## 2. Data linkage
-Run the PPD_EPC_linkage.R.
+Run the **PPD_EPC_linkage.R**.
 - ***casa*** is the all the linked results from the four stages matching
 - ***result2*** is linked result has the recent EPCs for each transaction  
  
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
 
 ## 3. Evaluation of the data linkage 
+Run the **Evaluation.R**.
+# 3.1 Annual match rate between 1995 and 2019 
+
+# 3.2 Evaluation of data linkage 
+(1)
+
+(2)
 
 ## 4. Linked PPD between 2011 and 2019
 
