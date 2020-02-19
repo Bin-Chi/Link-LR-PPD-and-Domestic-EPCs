@@ -26,13 +26,20 @@ Download Land Registry PPD from UK goverment website (https://www.gov.uk/governm
  Runing the **Data_cleaning1.sql** to clean up the transaction which are not sold in full market value and property type is Other. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for linkage; Domestic EPCs dataset with postcodes in Land Registry PPD are also selected.
 
 ## 2. Data linkage
-Run the PPD_EPC_linkage.R.
+Run the **PPD_EPC_linkage.R**.
 - ***casa*** is the all the linked results from the four stages matching
 - ***result2*** is linked result has the recent EPCs for each transaction  
  
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
 
 ## 3. Evaluation of the data linkage 
+Run the **Evaluation.R**.
+# 3.1 Annual match rate between 1995 and 2019 
+
+# 3.2 Evaluation of data linkage 
+3.2.1
+
+3.2.2 K-S test and J-
 
 ## 4. Linked PPD between 2011 and 2019
 
