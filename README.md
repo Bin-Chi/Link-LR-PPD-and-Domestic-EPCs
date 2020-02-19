@@ -35,7 +35,7 @@ Run the **PPD_EPC_linkage.R**.
 ## 3. Evaluation of the data linkage 
 Run the **Evaluation.R**.
 # 3.1 Annual match rate between 1995 and 2019 
-
+![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/annual_matchrate.png)
 # 3.2 Evaluation of data linkage 
 (1)
 
