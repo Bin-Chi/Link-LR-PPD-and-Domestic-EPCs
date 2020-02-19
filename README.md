@@ -10,6 +10,19 @@ Create a new PostgreSQL and named as **datajournal**. Here, the password of post
 
 
 ### 1.2 Set the working directory for R
+Process of setting working directory is listed below:
+- Create a directory named "R" in your D Device.
+- Create a sub-directory named "matchcasa1" in "R" folder.  
+- Put the rulechi.csv file in the "matchcasa1" folder.
+
+
+***NOTE:*** If you would like to change your working directory, you also need to change the filepath of **setwd("D:/R/matchcasa1")** and **setwd("D:/R")** in the R code (PPD_EPC_linkage.R).
+
+
+### 1.3 Read in the Land Registry PPD in datajournal database
+Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Using the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
+
+### 1.4 Clean up Land Registry PPD in atajournal database before linkage
 
 
 ## 2. Data linkage
@@ -28,9 +41,6 @@ Run the PPD_EPC_linkage.R.
 ## 6. User note for the linked data
 
 
-## 7. Future research
-
-
-## 8. Acknowledgements
+## 7. Acknowledgements
 
 The authors would like to thank David Lockett and Caroline Bray of Land Registry, who offered guidance on the Land Registry PPD. Thanks also to Jessica Williamson and Jake Mulley, who helped to transfer our questions on EPCs to the teams in MHCLG, allowing the authors to deepen their understanding of this data set at the end of this research. The authors also would like to thank Rob Liddiard of the UCL Energy Institute for sharing his expertise regarding EPC data during the earlier stages of this research.  
