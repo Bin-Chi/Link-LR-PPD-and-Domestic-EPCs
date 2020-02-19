@@ -39,7 +39,7 @@ Run the **PPD_EPC_linkage.R**.
 Run the **Evaluation.R**.
 # 3.1 Annual match rate between 1995 and 2019 
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/annual_matchrate.png)
-            *  **Figure 3** Match rate of linked house price in England and Wales,1995-2019
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 3** Match rate of linked house price in England and Wales,1995-2019
 
 
 # 3.2 Evaluation of data linkage 
