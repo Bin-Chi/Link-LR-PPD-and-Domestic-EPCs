@@ -9,6 +9,30 @@
 # Date: 19/12/2019
 
 
+#read in pricepaid data in PostgreSQL database
+CREATE TABLE pricepaid
+(
+  transactionid text NOT NULL,
+  price bigint,
+  dateoftransfer date,
+  postcode text,
+  propertytype text,
+  oldnew text,
+  duration text,
+  paon text,
+  saon text,
+  street text,
+  locality text,
+  towncity text,
+  district text,
+  county text,
+  categorytype text,
+  recordstatus text
+)
+COPY pricepaid FROM 'D:/pp-complete.csv' DELIMITERS ',' CSV QUOTE '"'
+#Query returned successfully: 24852949 rows affected, 04:01 minutes execution time.
+
+
 ###clean the Land Registry PPD before the do the linkage with EPC
 
 DELETE FROM  pricepaid WHERE categorytype='B';
