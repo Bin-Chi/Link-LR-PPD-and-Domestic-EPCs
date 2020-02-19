@@ -43,9 +43,9 @@ Run the **Evaluation.R**.
 
 
 # 3.2 Evaluation of data linkage 
-(1)
+(1) House price distribution of original data and linked data
 
-(2)
+(2) K-S test and J-divergence method
 
 ## 4. Linked PPD between 2011 and 2019
 
