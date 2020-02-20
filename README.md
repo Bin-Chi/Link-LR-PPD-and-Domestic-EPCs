@@ -63,8 +63,11 @@ Run the **Evaluation.R**.
 
 ## 4. Data cleaning 
 
-## 5. User note for the linked data
+6,753,307 records of linked data can be geo-referenced by linking the NSPL between 1/1/2011 and 31/10/2019 in England and Wales. This data comprises the transaction information in the Land Registry PPD together with property size (total floor area and number of habitable rooms) in EPCs. Some properties’ total floor area and number of habitable rooms are recorded in EPCs with missing or untenable values (e.g. total floor area records as 0.01). This data is excluded prior to analysis. 
 
+
+## 5. User note for the linked data
+One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (epcid) allowing us to link properties within the EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. 
 
 ## 6. Acknowledgements
 
