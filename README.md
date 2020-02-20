@@ -40,7 +40,7 @@ Run the **PPD_EPC_linkage.R**.
 - ***result2*** is linked result has the recent EPCs for each transaction  
  
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
-
+ &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 1** Snapshot of the PPD_EPC_linkage R code
 ## 3. Evaluation of the data linkage 
 Run the **Evaluation.R**.
 ### 3.1 Annual match rate between 1995 and 2019 
