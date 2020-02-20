@@ -50,7 +50,9 @@ Run the **Evaluation.R**.
 
 ### 3.3 Linked PPD between 2011 and 2019
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 1** Summary of the matching for property type, 2011-2019
- &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;| Property type | Land Registry PPD | Linked data | Match rate |
+ 
+
+| Property type | Land Registry PPD | Linked data | Match rate |
 |  ---      |    ---       |     ---   |   ---    |
 | Detached   | 1,802,813     | 1,682,801    |93.34%    |
 | Flats/Maisonettes    | 1,369,376       | 1,213,548     | 88.62%      |
