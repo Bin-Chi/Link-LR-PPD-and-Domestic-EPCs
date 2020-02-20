@@ -89,7 +89,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 |   |      |    HM Land Registry |    |
 |   |      |    HM Land Registry |    |
 |   |      |    HM Land Registry |    |
-|   |      |   AuthorS' own  |    |
+|   |      |   Authors' own  |    |
 |   |      |   NSPL  |    |
 |   |      |   NSPL |    |
 |   |      |   NSPL |    |
