@@ -23,7 +23,7 @@ Process of setting working directory is listed below:
 ### 1.3 Read in the Land Registry PPD in datajournal database
 Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
 
-### 1.4 Read in Domestic Energy Performance Certificates (EPCs) in datajournal database
+### 1.4 Read in Domestic EPCs in datajournal database
 
 
 
