@@ -23,10 +23,16 @@ Process of setting working directory is listed below:
 ### 1.3 Read in the Land Registry PPD in datajournal database
 Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
 
-### 1.4 Clean up Land Registry PPD in datajournal database before linkage
+### 1.4 Read in Domestic Energy Performance Certificates (EPCs) in datajournal database
+
+
+
+
+### 1.5 Clean up Land Registry PPD in datajournal database before linkage
  Runing the **Data_cleaning1.sql** to clean up the transaction which are not sold in full market value or property type is 'Other'. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for linkage; Domestic EPCs dataset with postcodes in Land Registry PPD are also selected.
 
-### 1.5 Read in the ational Statistics Postcode Lookup(NSPL) in datajournal database
+
+### 1.6 Read in the National Statistics Postcode Lookup(NSPL) in datajournal database
 Download NSPL (November 2019) from the Open Geography portal from the Office for National Statistics (ONS) (https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2019) and the save **NSPL_NOV_2019_UK.csv** in your D Device. Runing the **Read_NSPL.sql** to read in all the NSPL in **datajournal** database.
 
 ## 2. Data linkage
@@ -42,7 +48,6 @@ Run the **Evaluation.R**.
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/annual_matchrate.png)
       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 3** Match rate of linked house price in England and Wales,1995-2019
 
-***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different(e.g.'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET'VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
 
 ### 3.2 Evaluation of data linkage 
 (1) House price distribution of original data and linked data
@@ -68,7 +73,29 @@ Run the **Evaluation.R**.
 
 
 ## 5. User note for the linked data
-One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (epcid) allowing us to link properties within the EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. 
+One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (epcid) allowing us to link properties within the EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. Table 2 shows the description of the   fields in the newly linked data.
+
+
+
+| Property type | Land Registry PPD | Data resource |  |
+|  ---      |    ---       |     ---   |   ---    |
+| Detached   | 1,802,813     | 1,682,801    |93.34%    |
+| Flats/Maisonettes    | 1,369,376       | 1,213,548     | 88.62%      |
+| Semi-Detached    | 2,001,380       | 1,901,929      | 95.03%   |
+| Terraced    | 2,075,690      | 1,955,057    | 94.19%     |
+
+
+
+
+
+
+
+
+
+
+
+***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different(e.g.'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET'VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
+
 
 ## 6. Acknowledgements
 
