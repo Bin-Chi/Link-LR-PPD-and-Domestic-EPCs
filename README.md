@@ -50,6 +50,15 @@ Run the **Evaluation.R**.
 
 ### 3.3 Linked PPD between 2011 and 2019
 
+| Property type | Land Registry PPD | Linked data | Match rate |
+|  ---      |    ---       |     ---   |   ---    |
+| Detached   | 1,802,813     | 1,682,801    |93.34%    |
+| Flats/Maisonettes    | 1,369,376       | 1,213,548     | 88.62%      |
+| Semi-Detached    | 2,001,380       | 1,901,929      | 95.03%   |
+| Terraced    | 2,075,690      | 1,955,057    | 94.19%     |
+
+
+
 ## 4. Data cleaning 
 
 ## 5. User note for the linked data
