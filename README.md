@@ -24,8 +24,7 @@ Process of setting working directory is listed below:
 Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
 
 ### 1.4 Read in Domestic EPCs in datajournal database
-
-
+Domestic EPCs is open and available on-line from the Ministry for Housing, Communities and Local Government - MHCLG (https://epc.opendatacommunities.org/).The current EPC dataset is the third released version and contains certificates issued between 1/10/2008 and 31/5/2019.The third version records 18,575,357 energy performance data records with 84 fields. 
 
 
 ### 1.5 Clean up Land Registry PPD in datajournal database before linkage
@@ -77,22 +76,25 @@ One final data set is associated with this work – the linked geo-referenced  P
 
 
 
-| Property type | Land Registry PPD | Data resource |  |
+| Field name | Explanation| Data resource |  |
 |  ---      |    ---       |     ---   |   ---    |
-| Detached   | 1,802,813     | 1,682,801    |93.34%    |
-| Flats/Maisonettes    | 1,369,376       | 1,213,548     | 88.62%      |
-| Semi-Detached    | 2,001,380       | 1,901,929      | 95.03%   |
-| Terraced    | 2,075,690      | 1,955,057    | 94.19%     |
-
-
-
-
-
-
-
-
-
-
+|  |    |  HM Land Registry   |    |
+|   |      |    HM Land Registry |  |
+|   |      |  HM Land Registry   |   |
+|   |      |  HM Land Registry   |    |
+|   |      |  HM Land Registry   |    |
+|   |      |   HM Land Registry  |    |
+|   |      |   HM Land Registry  |    |
+|   |      |   HM Land Registry  |    |
+|   |      |    HM Land Registry |    |
+|   |      |    HM Land Registry |    |
+|   |      |    HM Land Registry |    |
+|   |      |   AuthorS' own  |    |
+|   |      |   NSPL  |    |
+|   |      |   NSPL |    |
+|   |      |   NSPL |    |
+|   |      |   MHCLG |    |
+|   |      |   MHCLG|    |
 
 ***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different(e.g.'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET'VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
 
