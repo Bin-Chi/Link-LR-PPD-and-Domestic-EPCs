@@ -1,10 +1,11 @@
 
 # Linking Land Registry Price Paid Data (PPD) and Domestic Energy Performance Certificates (EPCs)
-All matching rules were written in R with data inputs and outputs stored in a PostGIS database.
-## 1. Getting Started
+
+
 This project is the code part of authors' article which will submit in Scientific Data, code will not open until it accepted from the data journel. The linked dataset is under review of UK Data Service. This research is **not** allowed used in **commercial**.
 
-
+## 1. Getting Started
+All matching rules were written in R with data inputs and outputs stored in a PostGIS database.
 ### 1.1 Create a new PostgreSQL database
 Create a new PostgreSQL and named as **datajournal**. Here, the password of postgres user is assumed to be **123456**.
 
@@ -13,8 +14,8 @@ Create a new PostgreSQL and named as **datajournal**. Here, the password of post
 Process of setting working directory is listed below:
 - Create a directory named "R" in your D Device.
 - Create a sub-directory named "matchcasa1" in "R" folder.  
-- Put the rulechi.csv file in the "matchcasa1" folder.
-
+- Put the **rulechi.csv** file in the "matchcasa1" folder.
+- Put the **geo1.csv** file in the "matchcasa1" folder.
 
 ***NOTE:*** If you would like to change your working directory, you also need to change the filepath of **setwd("D:/R/matchcasa1")** and **setwd("D:/R")** in the R code (PPD_EPC_linkage.R).
 
@@ -34,12 +35,15 @@ Run the **PPD_EPC_linkage.R**.
 
 ## 3. Evaluation of the data linkage 
 Run the **Evaluation.R**.
-# 3.1 Annual match rate between 1995 and 2019 
+### 3.1 Annual match rate between 1995 and 2019 
+![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/annual_matchrate.png)
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 3** Match rate of linked house price in England and Wales,1995-2019
 
-# 3.2 Evaluation of data linkage 
-(1)
 
-(2)
+### 3.2 Evaluation of data linkage 
+(1) House price distribution of original data and linked data
+
+(2) K-S test and J-divergence method
 
 ## 4. Linked PPD between 2011 and 2019
 
