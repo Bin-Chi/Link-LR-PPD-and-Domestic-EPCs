@@ -49,7 +49,7 @@ Run the **Evaluation.R**.
 (2) K-S test and J-divergence method
 
 ### 3.3 Linked PPD between 2011 and 2019
- &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 1** Summary of the matching for property type, 2011-2019
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 1** Summary of the matching for property type, 2011-2019
  
 
 | Property type | Land Registry PPD | Linked data | Match rate |
