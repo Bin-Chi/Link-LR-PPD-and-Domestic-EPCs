@@ -1,5 +1,5 @@
 ﻿# ------------------------------------------------
-# Read LR PPD in postgis.sql
+# Read_LR_PPD.sql
 # ------------------------------------------------
 # Code provided as is and can be used or modified freely. 
 #
