@@ -26,6 +26,9 @@ Download Land Registry PPD from UK goverment website (https://www.gov.uk/governm
 ### 1.4 Clean up Land Registry PPD in atajournal database before linkage
  Runing the **Data_cleaning1.sql** to clean up the transaction which are not sold in full market value or property type is Other. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for linkage; Domestic EPCs dataset with postcodes in Land Registry PPD are also selected.
 
+### 1.4 Read in the NSPL in datajournal database
+
+
 ## 2. Data linkage
 Run the **PPD_EPC_linkage.R**.
 - ***casa*** is the all the linked results from the four stages matching
