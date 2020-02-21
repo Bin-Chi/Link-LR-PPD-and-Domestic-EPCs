@@ -81,26 +81,26 @@ One final data set is associated with this work – the linked geo-referenced  P
  
 
 
-| Field name | Explanation| Data resource |  |
+| Field name | Explanation| Data resource |  e.g|
 |  ---      |    ---       |     ---   |   ---    |
-|  id |      |    Authors' own |    |
-|  transactionid |      |  HM Land Registry   |   |
+|  id |  a unique identifier in Domestic EPCs   |    Authors' own |    |
+|  transactionid |  Transaction unique identifier    |  HM Land Registry   |   |
 |  msoa11 |      |   NSPL  |    |
 | postcode  |      |  HM Land Registry   |    |
-|  price |      |  HM Land Registry   |    |
-| dateoftransfer  |      |   HM Land Registry  |    |
-| propertytype  |      |   HM Land Registry  |    |
-|  oldnew |      |   HM Land Registry  |    |
-| duration  |      |    HM Land Registry |    |
-|  paon |      |    HM Land Registry |    |
-|  saon |      |    HM Land Registry |    |
+|  price |   Sale price (transfer deed)   |  HM Land Registry   |    |
+| dateoftransfer  | Date when the sale was completed     |   HM Land Registry  |    |
+| propertytype  | Indicates the type of house:  D = Detached, S = Semi-Detached, T = Terraced, F = Flats/Maisonettes   |   HM Land Registry  |    |
+|  oldnew |  Y refers a newly built property and N refers an established residential building. . If the property is firstly sold since 1995 it will identify as ‘a newly built property’   |   HM Land Registry  |    |
+| duration  |  The tenure of property: freehold, leasehold    |    HM Land Registry |    |
+|  paon |  Primary Addressable Object Name    |    HM Land Registry |    |
+|  saon |    Secondary Addressable Object Name.   |    HM Land Registry |    |
 | street  |      |    HM Land Registry |    |
 |locality  |      |    HM Land Registry |    |
 | towncity  |      |    HM Land Registry |    |
 | district  |      |    HM Land Registry |    |
 | county  |      |    HM Land Registry |    |
 | categorytype |      |    HM Land Registry |    |
-| crecordstatus |      |    HM Land Registry |    |
+| crecordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |    |
 |year |      |    Authors' own |    |
 | oa11  |      |   NSPL |    |
 |lsoa11   |      |   NSPL |    |
@@ -110,10 +110,10 @@ One final data set is associated with this work – the linked geo-referenced  P
 | gor  |      |     |    |
 | classt |      |   Authors' own  |    |
 | propertytype_epc  |      |   MHCLG |    |
-|  inspectiondate |      |   MHCLG|    |
-|  lodgementdate |      |   MHCLG|    |
-|  tfarea|      |   MHCLG|    |
-|  numberrooms |      |   MHCLG|    |
+|  inspectiondate |   The date that the inspection was actually carried out by the energy assessor.   |   MHCLG|    |
+|  lodgementdate |  Date lodged on the Energy Performance of Buildings Register.    |   MHCLG|    |
+|  tfarea|   The total useful floor area is the total of all enclosed spaces measured to the internal face of the external walls, the gross floor area as measured in accordance with the guidance issued from time to time by the Royal Institute of Chartered Surveyors or by a body replacing that institution.   |   MHCLG|    |
+|  numberrooms | Habitable rooms include any living room, sitting room, dining room, bedroom, study and similar; and also a non-separated conservatory. A kitchen/diner having a discrete seating area (with space for a table and four chairs) also counts as a habitable room. A non-separated conservatory adds to the habitable room count if it has an internal quality door between it and the dwelling. Excluded from the room count are any room used solely as a kitchen, utility room, bathroom, cloakroom, en-suite accommodation and similar; any hallway, stairs or landing; and also any room not having a window     |   MHCLG|    |
 |  priceper|   house price per square metre   |   Authors' own  |    |
 
 
