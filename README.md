@@ -10,7 +10,7 @@ All matching rules were written in R with data inputs and outputs stored in a Po
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Figure 1  A work flow of this project
 ### 1.1 Create a new spatial database in PostgreSQL
-Create a new PostGIS database and named as **datajournal**. Here, the password of postgres user is assumed to be **123456**.
+Create a new PostGIS database and named as **datajournal**(https://postgis.net/workshops/postgis-intro/creating_db.html). Here, the password of postgres user is assumed to be **123456**.
 
 
 ### 1.2 Set the working directory for R
