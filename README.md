@@ -83,7 +83,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 
 | Field name | Explanation| Data resource |  |
 |  ---      |    ---       |     ---   |   ---    |
-|  id |      |    MHCLG |    |
+|  id |      |    Authors' own |    |
 |  transactionid |      |  HM Land Registry   |   |
 |  msoa11 |      |   NSPL  |    |
 | postcode  |      |  HM Land Registry   |    |
@@ -102,22 +102,23 @@ One final data set is associated with this work – the linked geo-referenced  P
 | categorytype |      |    HM Land Registry |    |
 | crecordstatus |      |    HM Land Registry |    |
 |year |      |    Authors' own |    |
-|   |      |   NSPL |    |
-|   |      |   NSPL |    |
-|   |      |   NSPL |    |
-|   |      |   NSPL |    |
-|    |      |   Authors' own  |    |
-|   |      |   Authors' own  |    |
-
-|   |      |   MHCLG |    |
-|   |      |   MHCLG|    |
-
-|   |      |   NSPL |    |
-|   |      |   NSPL |    |
+| oa11  |      |   NSPL |    |
+|lsoa11   |      |   NSPL |    |
+|  laua |      |   NSPL |    |
+| ldnm  |      |    |    |
+| RGN11NM   |      |     |    |
+| gor  |      |     |    |
+| classt |      |   Authors' own  |    |
+| gor  |      |     |    |
+| propertytype_epc  |      |   MHCLG |    |
+|  inspectiondate |      |   MHCLG|    |
+|  lodgementdate |      |   MHCLG|    |
+|  tfarea|      |   MHCLG|    |
+|  numberrooms |      |   MHCLG|    |
 |  priceper|   house price per square metre   |   Authors' own  |    |
-|  price    |           |  HM Land Registry    |      |
-| transactionid  |    |  HM Land Registry   |    |
-| postcode  |      |    HM Land Registry |  |
+|   |      |    |    |
+|   |      |    |    |
+
 
 ***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
 
