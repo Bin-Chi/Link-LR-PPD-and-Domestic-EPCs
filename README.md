@@ -6,6 +6,9 @@ This project is the code part of authors' article which will submit in Scientifi
 
 ## 1. Getting Started
 All matching rules were written in R with data inputs and outputs stored in a PostGIS database.
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Figure 1  A work flow of this project
 ### 1.1 Create a new PostgreSQL database
 Create a new PostgreSQL and named as **datajournal**. Here, the password of postgres user is assumed to be **123456**.
 
@@ -35,7 +38,7 @@ Domestic EPCs is open and available on-line from the Ministry for Housing, Commu
 Download NSPL (November 2019) from the Open Geography portal from the Office for National Statistics (ONS) (https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2019) and the save **NSPL_NOV_2019_UK.csv** in your D Device. Runing the **Read_NSPL.sql** to read in all the NSPL in **datajournal** database.
 
 ## 2. Data linkage
-Run the **PPD_EPC_linkage.R**.
+Run the **PPD_EPC_linkage.R**. A screenshot of PPD_EPC_linkage R code is shown in Figure 2. Utilizing this R code, two result data are achieve:
 - ***casa*** is the all the linked results from the four stages matching
 - ***result2*** is linked result has the recent EPCs for each transaction  
  
