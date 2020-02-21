@@ -50,14 +50,17 @@ Run the **Evaluation.R**.
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/annual_matchrate.png)
       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 3.** Match rate of linked house price in England and Wales,1995-2019
 
-
-### 3.2 Evaluation of data linkage 
+The match rate between 2011 and 2019 is higher than 90%, while the match rate of the rest of the period is considerably lower, this is mainly due to the publicly available EPCs dataset only covering the period between 1/10/2008 and 31/8/2019. The match rate of 56.20% in 2008 is particularly low but rapidly increases to over 88 % after 2010. Since the match rate before 2008 is significantly lower than for the period after 2008, only the linked data between 2009 and 2019 are used to conduct the evaluation of data linkage.
+### 3.2 Evaluation of data linkage between 2009 and 2019
 (1) House price distribution of original data and linked data
-
+Match rates offer a crude way to quantify the matching performance, but visual comparison of the house price frequency distributions for the new linked data and unlinked PPD data reveals a clearer picture of matching performance.  Detials seen the article.
 (2) K-S test and J-divergence method
-
+The Kolmogorov–Smirnov test (K-S test) and the Jeffreys divergence (J-divergence) can be used to quantify the extent of house price information lost.  Detials seen the article.
 ### 3.3 Linked PPD between 2011 and 2019
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 1** Summary of the matching for property type, 2011-2019
+(1) Overall Match rate between 2011 and 2019
+The overall match rate for this period is 93.15%. The match rates for detached, semi-detached or terraced houses are around 94%. Address elements for the Flats/Maisonettes category are more detailed than for detached, semi-detached or terraced houses. This makes linking the Flats/Maisonettes transactions with their domestic EPCs more difficult with a lower match rate. The match rate for Flats/Maisonettes (88.62%) is lower than the rates for houses (Table 1). Detials seen the article.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 1.** Summary of the matching for property type, 2011-2019
  
 
 | Property type | Land Registry PPD | Linked data | Match rate |
@@ -67,7 +70,8 @@ Run the **Evaluation.R**.
 | Semi-Detached    | 2,001,380       | 1,901,929      | 95.03%   |
 | Terraced    | 2,075,690      | 1,955,057    | 94.19%     |
 
-
+(2) Overall match rate at local authority level
+Looking at annual match rates across local authorities in England and Wales (Figure 7), 70% of local authorities have an annual match rate over 90% for every year from 2011 to 2019, while 98% have a match rate over 80% for every year. Detials seen the article.
 
 ## 4. Data cleaning 
 
@@ -77,7 +81,7 @@ Run the **Evaluation.R**.
 ## 5. User note for the linked data
 One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (id) allowing us to link properties within the EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. Table 2 shows the description of the   fields in the newly linked data.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 2** Explanations of information fields in the new attribute-linked residential property price dataset
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 2.** Explanations of information fields in the new attribute-linked residential property price dataset
  
 
 
