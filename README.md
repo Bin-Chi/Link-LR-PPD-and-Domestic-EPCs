@@ -82,9 +82,13 @@ One final data set is associated with this work – the linked geo-referenced  P
 
 
 | Field name | Explanation| Data resource |  |
-|  ---      |    ---       |     ---   |   ---    |
-|  |    |  HM Land Registry   |    |
-|   |      |    HM Land Registry |  |
+| ---| ---| --- |  ---|
+
+
+|  priceper|   house price per square metre   |   Authors' own  |    |
+|  price    |           |  HM Land Registry    |      |
+| transactionid  |    |  HM Land Registry   |    |
+| postcode  |      |    HM Land Registry |  |
 |   |      |  HM Land Registry   |   |
 |   |      |  HM Land Registry   |    |
 |   |      |  HM Land Registry   |    |
