@@ -82,7 +82,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 
 
 | Field name | Explanation| Data resource |  |
-| ---| ---| --- |  ---|
+|  ---      |    ---       |     ---   |   ---    |
 
 
 |  priceper|   house price per square metre   |   Authors' own  |    |
