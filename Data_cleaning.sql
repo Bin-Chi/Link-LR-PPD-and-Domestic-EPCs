@@ -1,5 +1,5 @@
 ﻿# ------------------------------------------------
-# Data_cleaning1.sql
+# Data_cleaning.sql
 # ------------------------------------------------
 # Code provided as is and can be used or modified freely. 
 #
