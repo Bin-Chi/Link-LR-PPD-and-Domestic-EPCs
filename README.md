@@ -41,7 +41,7 @@ Download NSPL (November 2019) from the Open Geography portal from the Office for
 ## 2. Data linkage
 Run the **PPD_EPC_linkage.R**. A screenshot of PPD_EPC_linkage R code is shown in Figure 2. Utilizing this R code, two result data are achieve:
 - ***casa*** is the all the linked results from the four stages matching
-- ***result2*** is linked result has the recent EPCs for each transaction  
+- ***result2*** is linked result has the recent EPCs for each transaction , which refers the Linked_EPC PPD in figure 1.  
  
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 2.** Snapshot of the PPD_EPC_linkage R code
