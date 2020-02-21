@@ -83,23 +83,41 @@ One final data set is associated with this work – the linked geo-referenced  P
 
 | Field name | Explanation| Data resource |  |
 |  ---      |    ---       |     ---   |   ---    |
-|   |      |  HM Land Registry   |   |
-|   |      |  HM Land Registry   |    |
-|   |      |  HM Land Registry   |    |
-|   |      |   HM Land Registry  |    |
-|   |      |   HM Land Registry  |    |
-|   |      |   HM Land Registry  |    |
-|   |      |    HM Land Registry |    |
-|   |      |    HM Land Registry |    |
-|   |      |    HM Land Registry |    |
+|  id |      |    MHCLG |    |
+|  transactionid |      |  HM Land Registry   |   |
+|  msoa11 |      |   NSPL  |    |
+| postcode  |      |  HM Land Registry   |    |
+|  price |      |  HM Land Registry   |    |
+| dateoftransfer  |      |   HM Land Registry  |    |
+| propertytype  |      |   HM Land Registry  |    |
+|  oldnew |      |   HM Land Registry  |    |
+| duration  |      |    HM Land Registry |    |
+|  paon |      |    HM Land Registry |    |
+|  saon |      |    HM Land Registry |    |
+| street  |      |    HM Land Registry |    |
+|locality  |      |    HM Land Registry |    |
+| towncity  |      |    HM Land Registry |    |
+| district  |      |    HM Land Registry |    |
+| county  |      |    HM Land Registry |    |
+| categorytype |      |    HM Land Registry |    |
+| crecordstatus |      |    HM Land Registry |    |
+|year |      |    Authors' own |    |
+|   |      |   NSPL |    |
+|   |      |   NSPL |    |
+|   |      |   NSPL |    |
+|   |      |   NSPL |    |
+|    |      |   Authors' own  |    |
 |   |      |   Authors' own  |    |
-|   |      |   Authors' own  |    |
-|   |      |    MHCLG |    |
+
 |   |      |   MHCLG |    |
 |   |      |   MHCLG|    |
-|   |      |   NSPL  |    |
+
 |   |      |   NSPL |    |
 |   |      |   NSPL |    |
+|  priceper|   house price per square metre   |   Authors' own  |    |
+|  price    |           |  HM Land Registry    |      |
+| transactionid  |    |  HM Land Registry   |    |
+| postcode  |      |    HM Land Registry |  |
 
 ***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
 
