@@ -5,10 +5,9 @@
 This project is the code part of authors' article which will submit in Scientific Data, code will not open until it accepted from the data journel. The linked dataset is under review of UK Data Service. This research is **not** allowed used in **commercial**.
 
 ## 1. Getting Started
-All matching rules were written in R with data inputs and outputs stored in a PostGIS database.
+All matching rules were written in R with data inputs and outputs stored in a PostGIS database. Figure 1 display the whole work flowchart.
 
 
-![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/workflow.png)
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Figure 1  A work flow of this project
 ### 1.1 Create a new spatial database in PostgreSQL
@@ -42,7 +41,7 @@ Download NSPL (November 2019) from the Open Geography portal from the Office for
 ## 2. Data linkage
 Run the **PPD_EPC_linkage.R**. A screenshot of PPD_EPC_linkage R code is shown in Figure 2. Utilizing this R code, two result data are achieve:
 - ***casa*** is the all the linked results from the four stages matching
-- ***result2*** is linked result has the recent EPCs for each transaction  
+- ***result2*** is linked result has the recent EPCs for each transaction , which refers the Linked_EPC PPD in figure 1.  
  
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 2.** Snapshot of the PPD_EPC_linkage R code
