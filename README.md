@@ -111,7 +111,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 |year |    Year when the sale was completed   |    Authors' own |  2014  |
 | oa11  | The 2011 Census Output Area (OA) code  |   NSPL |  E00155821  |
 |lsoa11   |  The 2011 Census Lower Layer Super Output Area (LSOA) code    |   NSPL |    E01030550 |
-|  laua |      |   NSPL |  E07000210  |
+|  laua |      |   ? |  E07000210  |
 | ldnm  |      |    |   Mole Valley |
 | RGN11NM   |      |     |   South East |
 | gor  |      |     | E12000008   |
