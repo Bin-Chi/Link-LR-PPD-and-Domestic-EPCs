@@ -92,8 +92,8 @@ One final data set is associated with this work – the linked geo-referenced  P
 |  ---      |    ---       |     ---   |   ---    |
 |  id |  A unique identifier in Domestic EPCs   |    Authors' own |  10000000  |
 |  transactionid |  Transaction unique identifier    |  HM Land Registry   |   {5F2B8B60-B9D0-4F00-8561-8BBF0C991BE1}|
-|  msoa11 |      |   NSPL  |   E02006364 |
-| postcode  |      |  HM Land Registry   |   KT22 7LN |
+|  msoa11 | The 2011 Census Middle Layer Super Output Area (MSOA) code     |   NSPL  |   E02006364 |
+| postcode  |  Postcode information of the property    |  HM Land Registry   |   KT22 7LN |
 |  price |   Sale price (transfer deed)   |  HM Land Registry   | 187250   |
 | dateoftransfer  | Date when the sale was completed     |   HM Land Registry  | 2014-07-11   |
 | propertytype  | Indicates the type of house:  D = Detached, S = Semi-Detached, T = Terraced, F = Flats/Maisonettes   |   HM Land Registry  |  F  |
@@ -109,8 +109,8 @@ One final data set is associated with this work – the linked geo-referenced  P
 | categorytype |      |    HM Land Registry |  A  |
 | crecordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |  A  |
 |year |    Year when the sale was completed   |    Authors' own |  2014  |
-| oa11  |      |   NSPL |  E00155821  |
-|lsoa11   |      |   NSPL |    E01030550 |
+| oa11  | The 2011 Census Output Area (OA) code  |   NSPL |  E00155821  |
+|lsoa11   |  The 2011 Census Lower Layer Super Output Area (LSOA) code    |   NSPL |    E01030550 |
 |  laua |      |   NSPL |  E07000210  |
 | ldnm  |      |    |   Mole Valley |
 | RGN11NM   |      |     |   South East |
