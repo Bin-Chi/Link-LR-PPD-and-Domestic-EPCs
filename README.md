@@ -2,7 +2,7 @@
 # Linking Land Registry Price Paid Data (PPD) and Domestic Energy Performance Certificates (EPCs)
 
 
-This project is the code part of authors' article which will submit in Scientific Data, code will not open until it accepted from the data journel. The linked dataset is under review of UK Data Service. This research is **not** allowed used in **commercial**.
+This project is the code part of authors' article which will submit in Scientific Data, main codes will not open until it accepted from the data journel. The linked dataset is under review of UK Data Service. This research is **not** allowed used in **commercial**.
 
 ## 1. Getting Started
 All matching rules were written in R with data inputs and outputs stored in a PostGIS database. Figure 1 displays the whole work flowchart.
@@ -29,11 +29,11 @@ Process of setting working directory is listed below:
 Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
 
 ### 1.4 Read in Domestic EPCs in datajournal database
-Domestic EPCs is open and available on-line from the Ministry for Housing, Communities and Local Government - MHCLG (https://epc.opendatacommunities.org/).The current EPC dataset is the third released version and contains certificates issued between 1/10/2008 and 31/5/2019.The third version records 18,575,357 energy performance data records with 84 fields. 
+Domestic EPCs is open and available on-line from the Ministry for Housing, Communities and Local Government - MHCLG (https://epc.opendatacommunities.org/). The current EPC dataset is the third released version and contains certificates issued between 1/10/2008 and 31/5/2019.The third version records 18,575,357 energy performance data records with 84 fields. 
 
 
 ### 1.5 Clean up Land Registry PPD in datajournal database before linkage
- Runing the **Data_cleaning.sql** to clean up the transaction which are not sold in full market value or property type is 'Other'. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for linkage; Domestic EPCs dataset with postcodes in Land Registry PPD are also selected.
+ Runing the **Data_cleaning.sql** to clean up the transaction which are not sold in full market value or property type is 'Other'. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for the following linkage; Domestic EPCs dataset with postcodes in Land Registry PPD are also selected for the following Linkage.
 
 
 ### 1.6 Read in the National Statistics Postcode Lookup(NSPL) in datajournal database
@@ -47,16 +47,17 @@ Run the **PPD_EPC_linkage.R**. A screenshot of PPD_EPC_linkage R code is shown i
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 2.** Snapshot of the PPD_EPC_linkage R code
 ## 3. Evaluation of the data linkage 
-Run the **Evaluation.R**.
+Run the **Evaluation.R**. This section evaluates the performance of data linkage for idenitfy a time period which house price informaiton lost related small. It firstly investages overall annual match rate to choose an initial time period. Futher investagtion is conducted for the initial time period by investgate the data information lost before and after linkage with three mehtods( visualizatinon through the data distribution before and after linkege, K-S test and J-divergence method for the dataset before and after linkage). A final time period of the linked dataset are decided by consider the resutls of these three methods.
 ### 3.1 Annual match rate between 1995 and 2019 
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/annual_matchrate.png)
       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 3.** Match rate of linked house price in England and Wales,1995-2019
 
 The match rate between 2011 and 2019 is higher than 90%, while the match rate of the rest of the period is considerably lower, this is mainly due to the publicly available EPCs dataset only covering the period between 1/10/2008 and 31/8/2019. The match rate of 56.20% in 2008 is particularly low but rapidly increases to over 88 % after 2010. Since the match rate before 2008 is significantly lower than for the period after 2008, only the linked data between 2009 and 2019 are used to conduct the evaluation of data linkage.
 ### 3.2 Evaluation of data linkage between 2009 and 2019
-(1) House price distribution of original data and linked data
-Match rates offer a crude way to quantify the matching performance, but visual comparison of the house price frequency distributions for the new linked data and unlinked PPD data reveals a clearer picture of matching performance.  Detials seen the article.
-(2) K-S test and J-divergence method
+####(1) House price distribution of original data and linked data
+Match rates offer a crude way to quantify the matching performance, but visual comparison of the house price frequency distributions for the new linked data and unlinked PPD data reveals a clearer picture of matching performance. Detials seen the article.
+
+####(2) K-S test and J-divergence method
 The Kolmogorov–Smirnov test (K-S test) and the Jeffreys divergence (J-divergence) can be used to quantify the extent of house price information lost.  Detials seen the article.
 ### 3.3 Linked PPD between 2011 and 2019
 (1) Overall Match rate between 2011 and 2019
@@ -73,11 +74,11 @@ The overall match rate for this period is 93.15%. The match rates for detached, 
 | Terraced    | 2,075,690      | 1,955,057    | 94.19%     |
 
 (2) Overall match rate at local authority level
-Looking at annual match rates across local authorities in England and Wales (Figure 7), 70% of local authorities have an annual match rate over 90% for every year from 2011 to 2019, while 98% have a match rate over 80% for every year. Detials seen the article.
+70% of local authorities in England and Wales have an annual match rate over 90% for every year from 2011 to 2019, while 98% have a match rate over 80% for every year. Detials seen the article.
 
 ## 4. Data cleaning 
 
-6,753,307 records of linked data can be geo-referenced by linking the NSPL between 1/1/2011 and 31/10/2019 in England and Wales. This data comprises the transaction information in the Land Registry PPD together with property size (total floor area and number of habitable rooms) in EPCs. Some properties’ total floor area and number of habitable rooms are recorded in EPCs with missing or untenable values (e.g. total floor area records as 0.01). This data is excluded prior to analysis. Code for this section is **Data_cleaning.R**.
+6,753,307 records of linked data can be geo-referenced by linking the NSPL between 1/1/2011 and 31/10/2019 in England and Wales. This data comprises the transaction information in the Land Registry PPD together with property size (total floor area and number of habitable rooms) in EPCs. Since some properties’ total floor area and number of habitable rooms are recorded in EPCs with missing or untenable values (e.g. total floor area records as 0.01), this data is excluded prior to analysis. Code for this section is **Data_cleaning.R**.
 
 
 ## 5. User note for the linked data
