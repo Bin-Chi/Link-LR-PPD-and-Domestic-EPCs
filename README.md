@@ -106,7 +106,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 | towncity  |      |    HM Land Registry | LEATHERHEAD   |
 | district  |      |    HM Land Registry |  MOLE VALLEY  |
 | county  |      |    HM Land Registry |  SURREY  |
-| categorytype |      |    HM Land Registry |  A  |
+| categorytype |  A = Standard Price Paid entry, includes single residential property sold for full market value    |    HM Land Registry |  A  |
 | crecordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |  A  |
 |year |    Year when the sale was completed   |    Authors' own |  2014  |
 | oa11  | The 2011 Census Output Area (OA) code  |   NSPL |  E00155821  |
@@ -115,8 +115,8 @@ One final data set is associated with this work – the linked geo-referenced  P
 | ldnm  |      |    |   Mole Valley |
 | RGN11NM   |      |     |   South East |
 | gor  |      |     | E12000008   |
-| classt |      |   Authors' own  |  12  |
-| propertytype_epc  |      |   MHCLG |  Flat  |
+| classt |Indicates for 1:1 and 1:n relationship of the linked data in the address mathcing.  11 refers to 1:1  relationship; 12 refers refers to 1:n relationship   |   Authors' own  |  12  |
+| propertytype_epc  |  Describes the type of property. e.g. Maisonette, Flat, House, Bungalow, Park home.    |   MHCLG |  Flat  |
 |  inspectiondate |   The date that the inspection was actually carried out by the energy assessor.   |   MHCLG|  2019-05-08   |
 |  lodgementdate |  Date lodged on the Energy Performance of Buildings Register.    |   MHCLG|  2019-05-08   |
 |  tfarea|   The total useful floor area is the total of all enclosed spaces measured to the internal face of the external walls, the gross floor area as measured in accordance with the guidance issued from time to time by the Royal Institute of Chartered Surveyors or by a body replacing that institution.   |   MHCLG|  46  |
