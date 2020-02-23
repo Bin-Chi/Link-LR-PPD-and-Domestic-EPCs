@@ -88,40 +88,40 @@ One final data set is associated with this work – the linked geo-referenced  P
  
 
 
-| Field name | Explanation| Data resource |  e.g|
+| Field name | Explanation| Data resource | example|
 |  ---      |    ---       |     ---   |   ---    |
-|  id |  a unique identifier in Domestic EPCs   |    Authors' own |    |
-|  transactionid |  Transaction unique identifier    |  HM Land Registry   |   |
-|  msoa11 |      |   NSPL  |    |
-| postcode  |      |  HM Land Registry   |    |
-|  price |   Sale price (transfer deed)   |  HM Land Registry   |    |
-| dateoftransfer  | Date when the sale was completed     |   HM Land Registry  |    |
-| propertytype  | Indicates the type of house:  D = Detached, S = Semi-Detached, T = Terraced, F = Flats/Maisonettes   |   HM Land Registry  |    |
-|  oldnew |  Y refers a newly built property and N refers an established residential building. . If the property is firstly sold since 1995 it will identify as ‘a newly built property’   |   HM Land Registry  |    |
-| duration  |  The tenure of property: freehold, leasehold    |    HM Land Registry |    |
-|  paon |  Primary Addressable Object Name    |    HM Land Registry |    |
-|  saon |    Secondary Addressable Object Name.   |    HM Land Registry |    |
-| street  |      |    HM Land Registry |    |
-|locality  |      |    HM Land Registry |    |
-| towncity  |      |    HM Land Registry |    |
-| district  |      |    HM Land Registry |    |
-| county  |      |    HM Land Registry |    |
-| categorytype |      |    HM Land Registry |    |
-| crecordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |    |
-|year |      |    Authors' own |    |
-| oa11  |      |   NSPL |    |
-|lsoa11   |      |   NSPL |    |
-|  laua |      |   NSPL |    |
-| ldnm  |      |    |    |
-| RGN11NM   |      |     |    |
-| gor  |      |     |    |
-| classt |      |   Authors' own  |    |
-| propertytype_epc  |      |   MHCLG |    |
-|  inspectiondate |   The date that the inspection was actually carried out by the energy assessor.   |   MHCLG|    |
-|  lodgementdate |  Date lodged on the Energy Performance of Buildings Register.    |   MHCLG|    |
-|  tfarea|   The total useful floor area is the total of all enclosed spaces measured to the internal face of the external walls, the gross floor area as measured in accordance with the guidance issued from time to time by the Royal Institute of Chartered Surveyors or by a body replacing that institution.   |   MHCLG|    |
-|  numberrooms | Habitable rooms include any living room, sitting room, dining room, bedroom, study and similar; and also a non-separated conservatory. A kitchen/diner having a discrete seating area (with space for a table and four chairs) also counts as a habitable room. A non-separated conservatory adds to the habitable room count if it has an internal quality door between it and the dwelling. Excluded from the room count are any room used solely as a kitchen, utility room, bathroom, cloakroom, en-suite accommodation and similar; any hallway, stairs or landing; and also any room not having a window     |   MHCLG|    |
-|  priceper|   house price per square metre   |   Authors' own  |    |
+|  id |  A unique identifier in Domestic EPCs   |    Authors' own |  10000000  |
+|  transactionid |  Transaction unique identifier    |  HM Land Registry   |   {5F2B8B60-B9D0-4F00-8561-8BBF0C991BE1}|
+|  msoa11 |      |   NSPL  |   E02006364 |
+| postcode  |      |  HM Land Registry   |   KT22 7LN |
+|  price |   Sale price (transfer deed)   |  HM Land Registry   | 187250   |
+| dateoftransfer  | Date when the sale was completed     |   HM Land Registry  | 2014-07-11   |
+| propertytype  | Indicates the type of house:  D = Detached, S = Semi-Detached, T = Terraced, F = Flats/Maisonettes   |   HM Land Registry  |  F  |
+|  oldnew |  Y refers a newly built property and N refers an established residential building. . If the property is firstly sold since 1995 it will identify as ‘a newly built property’   |   HM Land Registry  |  N  |
+| duration  |  The tenure of property: freehold, leasehold    |    HM Land Registry |   L |
+|  paon |  Primary Addressable Object Name    |    HM Land Registry |   BURLEIGH COURT  |
+|  saon |    Secondary Addressable Object Name.   |    HM Land Registry |  FLAT 10  |
+| street  |      |    HM Land Registry |  BELMONT ROAD   |
+|locality  |      |    HM Land Registry |  NULL  |
+| towncity  |      |    HM Land Registry | LEATHERHEAD   |
+| district  |      |    HM Land Registry |  MOLE VALLEY  |
+| county  |      |    HM Land Registry |  SURREY  |
+| categorytype |      |    HM Land Registry |  A  |
+| crecordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |  A  |
+|year |    Year when the sale was completed   |    Authors' own |  2014  |
+| oa11  |      |   NSPL |  E00155821  |
+|lsoa11   |      |   NSPL |    E01030550 |
+|  laua |      |   NSPL |  E07000210  |
+| ldnm  |      |    |   Mole Valley |
+| RGN11NM   |      |     |   South East |
+| gor  |      |     | E12000008   |
+| classt |      |   Authors' own  |  12  |
+| propertytype_epc  |      |   MHCLG |  Flat  |
+|  inspectiondate |   The date that the inspection was actually carried out by the energy assessor.   |   MHCLG|  2019-05-08   |
+|  lodgementdate |  Date lodged on the Energy Performance of Buildings Register.    |   MHCLG|  2019-05-08   |
+|  tfarea|   The total useful floor area is the total of all enclosed spaces measured to the internal face of the external walls, the gross floor area as measured in accordance with the guidance issued from time to time by the Royal Institute of Chartered Surveyors or by a body replacing that institution.   |   MHCLG|  46  |
+|  numberrooms | Habitable rooms include any living room, sitting room, dining room, bedroom, study and similar; and also a non-separated conservatory. A kitchen/diner having a discrete seating area (with space for a table and four chairs) also counts as a habitable room. A non-separated conservatory adds to the habitable room count if it has an internal quality door between it and the dwelling. Excluded from the room count are any room used solely as a kitchen, utility room, bathroom, cloakroom, en-suite accommodation and similar; any hallway, stairs or landing; and also any room not having a window     |   MHCLG|  2  |
+|  priceper|   house price per square metre   |   Authors' own  |  4070.652  |
 
 
 ***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
