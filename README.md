@@ -111,7 +111,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 | district  |      |    HM Land Registry |  MOLE VALLEY  |
 | county  |      |    HM Land Registry |  SURREY  |
 | categorytype |  A = Standard Price Paid entry, includes single residential property sold for full market value    |    HM Land Registry |  A  |
-| crecordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |  A  |
+| recordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |  A  |
 |year |    Year when the sale was completed   |    Authors' own |  2014  |
 |lsoa11   |  The 2011 Census Lower Layer Super Output Area (LSOA) code    |   NSPL |    E01030550 |
 |  msoa11 | The 2011 Census Middle Layer Super Output Area (MSOA) code     |   NSPL  |   E02006364 |
