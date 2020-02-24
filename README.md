@@ -2,13 +2,13 @@
 # Linking Land Registry Price Paid Data (PPD) and Domestic Energy Performance Certificates (EPCs)
 
 
-This project is the code part of authors' article which will submit in Scientific Data, code will not open until it accepted from the data journel. The linked dataset is under review of UK Data Service. This research is **not** allowed used in **commercial**.
+This project is the code part of authors' article which will submit in Scientific Data, main codes will not open until it accepted from the data journel. The linked dataset is under review of UK Data Service. This research is **not** allowed used in **commercial**.
 
 ## 1. Getting Started
 All matching rules were written in R with data inputs and outputs stored in a PostGIS database. Figure 1 displays the whole work flowchart.
 
 
-
+![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/Workflow.png)
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Figure 1  A work flow of this project
 ### 1.1 Create a new spatial database in PostgreSQL
@@ -29,11 +29,11 @@ Process of setting working directory is listed below:
 Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
 
 ### 1.4 Read in Domestic EPCs in datajournal database
-Domestic EPCs is open and available on-line from the Ministry for Housing, Communities and Local Government - MHCLG (https://epc.opendatacommunities.org/).The current EPC dataset is the third released version and contains certificates issued between 1/10/2008 and 31/5/2019.The third version records 18,575,357 energy performance data records with 84 fields. 
+Domestic EPCs is open and available on-line from the Ministry for Housing, Communities and Local Government - MHCLG (https://epc.opendatacommunities.org/). The current EPC dataset is the third released version and contains certificates issued between 1/10/2008 and 31/5/2019.The third version records 18,575,357 energy performance data records with 84 fields. 
 
 
 ### 1.5 Clean up Land Registry PPD in datajournal database before linkage
- Runing the **Data_cleaning.sql** to clean up the transaction which are not sold in full market value or property type is 'Other'. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for linkage; Domestic EPCs dataset with postcodes in Land Registry PPD are also selected.
+ Runing the **Data_cleaning.sql** to clean up the transaction which are not sold in full market value or property type is 'Other'. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for the following linkage; Domestic EPCs dataset with postcodes in Land Registry PPD are also selected for the following Linkage.
 
 
 ### 1.6 Read in the National Statistics Postcode Lookup(NSPL) in datajournal database
@@ -47,16 +47,17 @@ Run the **PPD_EPC_linkage.R**. A screenshot of PPD_EPC_linkage R code is shown i
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 2.** Snapshot of the PPD_EPC_linkage R code
 ## 3. Evaluation of the data linkage 
-Run the **Evaluation.R**.
+Run the **Evaluation.R**. This section evaluates the performance of data linkage for idenitfy a time period which house price informaiton lost related small. It firstly investages overall annual match rate to choose an initial time period. Futher investagtion is conducted for the initial time period by investgate the data information lost before and after linkage with three mehtods( visualizatinon through the data distribution before and after linkege, K-S test and J-divergence method for the dataset before and after linkage). A final time period of the linked dataset are decided by consider the resutls of these three methods.
 ### 3.1 Annual match rate between 1995 and 2019 
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/annual_matchrate.png)
       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 3.** Match rate of linked house price in England and Wales,1995-2019
 
 The match rate between 2011 and 2019 is higher than 90%, while the match rate of the rest of the period is considerably lower, this is mainly due to the publicly available EPCs dataset only covering the period between 1/10/2008 and 31/8/2019. The match rate of 56.20% in 2008 is particularly low but rapidly increases to over 88 % after 2010. Since the match rate before 2008 is significantly lower than for the period after 2008, only the linked data between 2009 and 2019 are used to conduct the evaluation of data linkage.
 ### 3.2 Evaluation of data linkage between 2009 and 2019
-(1) House price distribution of original data and linked data
-Match rates offer a crude way to quantify the matching performance, but visual comparison of the house price frequency distributions for the new linked data and unlinked PPD data reveals a clearer picture of matching performance.  Detials seen the article.
-(2) K-S test and J-divergence method
+####(1) House price distribution of original data and linked data
+Match rates offer a crude way to quantify the matching performance, but visual comparison of the house price frequency distributions for the new linked data and unlinked PPD data reveals a clearer picture of matching performance. Detials seen the article.
+
+####(2) K-S test and J-divergence method
 The Kolmogorov–Smirnov test (K-S test) and the Jeffreys divergence (J-divergence) can be used to quantify the extent of house price information lost.  Detials seen the article.
 ### 3.3 Linked PPD between 2011 and 2019
 (1) Overall Match rate between 2011 and 2019
@@ -73,11 +74,11 @@ The overall match rate for this period is 93.15%. The match rates for detached, 
 | Terraced    | 2,075,690      | 1,955,057    | 94.19%     |
 
 (2) Overall match rate at local authority level
-Looking at annual match rates across local authorities in England and Wales (Figure 7), 70% of local authorities have an annual match rate over 90% for every year from 2011 to 2019, while 98% have a match rate over 80% for every year. Detials seen the article.
+70% of local authorities in England and Wales have an annual match rate over 90% for every year from 2011 to 2019, while 98% have a match rate over 80% for every year. Detials seen the article.
 
 ## 4. Data cleaning 
 
-6,753,307 records of linked data can be geo-referenced by linking the NSPL between 1/1/2011 and 31/10/2019 in England and Wales. This data comprises the transaction information in the Land Registry PPD together with property size (total floor area and number of habitable rooms) in EPCs. Some properties’ total floor area and number of habitable rooms are recorded in EPCs with missing or untenable values (e.g. total floor area records as 0.01). This data is excluded prior to analysis. Code for this section is **Data_clean.R**.
+6,753,307 records of linked data can be geo-referenced by linking the NSPL between 1/1/2011 and 31/10/2019 in England and Wales. This data comprises the transaction information in the Land Registry PPD together with property size (total floor area and number of habitable rooms) in EPCs. Since some properties’ total floor area and number of habitable rooms are recorded in EPCs with missing or untenable values (e.g. total floor area records as 0.01), this data is excluded prior to analysis. Code for this section is **Data_cleaning.R**.
 
 
 ## 5. User note for the linked data
@@ -87,40 +88,40 @@ One final data set is associated with this work – the linked geo-referenced  P
  
 
 
-| Field name | Explanation| Data resource |  e.g|
+| Field name | Explanation| Data resource | example|
 |  ---      |    ---       |     ---   |   ---    |
-|  id |  a unique identifier in Domestic EPCs   |    Authors' own |    |
-|  transactionid |  Transaction unique identifier    |  HM Land Registry   |   |
-|  msoa11 |      |   NSPL  |    |
-| postcode  |      |  HM Land Registry   |    |
-|  price |   Sale price (transfer deed)   |  HM Land Registry   |    |
-| dateoftransfer  | Date when the sale was completed     |   HM Land Registry  |    |
-| propertytype  | Indicates the type of house:  D = Detached, S = Semi-Detached, T = Terraced, F = Flats/Maisonettes   |   HM Land Registry  |    |
-|  oldnew |  Y refers a newly built property and N refers an established residential building. . If the property is firstly sold since 1995 it will identify as ‘a newly built property’   |   HM Land Registry  |    |
-| duration  |  The tenure of property: freehold, leasehold    |    HM Land Registry |    |
-|  paon |  Primary Addressable Object Name    |    HM Land Registry |    |
-|  saon |    Secondary Addressable Object Name.   |    HM Land Registry |    |
-| street  |      |    HM Land Registry |    |
-|locality  |      |    HM Land Registry |    |
-| towncity  |      |    HM Land Registry |    |
-| district  |      |    HM Land Registry |    |
-| county  |      |    HM Land Registry |    |
-| categorytype |      |    HM Land Registry |    |
-| crecordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |    |
-|year |      |    Authors' own |    |
-| oa11  |      |   NSPL |    |
-|lsoa11   |      |   NSPL |    |
-|  laua |      |   NSPL |    |
-| ldnm  |      |    |    |
-| RGN11NM   |      |     |    |
-| gor  |      |     |    |
-| classt |      |   Authors' own  |    |
-| propertytype_epc  |      |   MHCLG |    |
-|  inspectiondate |   The date that the inspection was actually carried out by the energy assessor.   |   MHCLG|    |
-|  lodgementdate |  Date lodged on the Energy Performance of Buildings Register.    |   MHCLG|    |
-|  tfarea|   The total useful floor area is the total of all enclosed spaces measured to the internal face of the external walls, the gross floor area as measured in accordance with the guidance issued from time to time by the Royal Institute of Chartered Surveyors or by a body replacing that institution.   |   MHCLG|    |
-|  numberrooms | Habitable rooms include any living room, sitting room, dining room, bedroom, study and similar; and also a non-separated conservatory. A kitchen/diner having a discrete seating area (with space for a table and four chairs) also counts as a habitable room. A non-separated conservatory adds to the habitable room count if it has an internal quality door between it and the dwelling. Excluded from the room count are any room used solely as a kitchen, utility room, bathroom, cloakroom, en-suite accommodation and similar; any hallway, stairs or landing; and also any room not having a window     |   MHCLG|    |
-|  priceper|   house price per square metre   |   Authors' own  |    |
+|  id |  A unique identifier in Domestic EPCs   |    Authors' own |  10000000  |
+|  transactionid |  Transaction unique identifier    |  HM Land Registry   |   {5F2B8B60-B9D0-4F00-8561-8BBF0C991BE1}|
+|  msoa11 | The 2011 Census Middle Layer Super Output Area (MSOA) code     |   NSPL  |   E02006364 |
+| postcode  |  Postcode information of the property    |  HM Land Registry   |   KT22 7LN |
+|  price |   Sale price (transfer deed)   |  HM Land Registry   | 187250   |
+| dateoftransfer  | Date when the sale was completed     |   HM Land Registry  | 2014-07-11   |
+| propertytype  | Indicates the type of house:  D = Detached, S = Semi-Detached, T = Terraced, F = Flats/Maisonettes   |   HM Land Registry  |  F  |
+|  oldnew |  Y refers a newly built property and N refers an established residential building. . If the property is firstly sold since 1995 it will identify as ‘a newly built property’   |   HM Land Registry  |  N  |
+| duration  |  The tenure of property: freehold, leasehold    |    HM Land Registry |   L |
+|  paon |  Primary Addressable Object Name    |    HM Land Registry |   BURLEIGH COURT  |
+|  saon |    Secondary Addressable Object Name.   |    HM Land Registry |  FLAT 10  |
+| street  |      |    HM Land Registry |  BELMONT ROAD   |
+|locality  |      |    HM Land Registry |  NULL  |
+| towncity  |      |    HM Land Registry | LEATHERHEAD   |
+| district  |      |    HM Land Registry |  MOLE VALLEY  |
+| county  |      |    HM Land Registry |  SURREY  |
+| categorytype |  A = Standard Price Paid entry, includes single residential property sold for full market value    |    HM Land Registry |  A  |
+| crecordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |  A  |
+|year |    Year when the sale was completed   |    Authors' own |  2014  |
+| oa11  | The 2011 Census Output Area (OA) code  |   NSPL |  E00155821  |
+|lsoa11   |  The 2011 Census Lower Layer Super Output Area (LSOA) code    |   NSPL |    E01030550 |
+|  laua |   The 2011 Census local authority district code   |   |  E07000210  |
+| ldnm  |     The 2011 Census local authority district name  |    |   Mole Valley |
+| RGN11NM   |  The 2011 Census region name    |     |   South East |
+| gor  |   The 2011 Census region district code  |     | E12000008   |
+| classt |Indicates for 1:1 and 1:n relationship of the linked data in the address mathcing.  11 refers to 1:1  relationship; 12 refers refers to 1:n relationship   |   Authors' own  |  12  |
+| propertytype_epc  |  Describes the type of property. e.g. Maisonette, Flat, House, Bungalow, Park home.    |   MHCLG |  Flat  |
+|  inspectiondate |   The date that the inspection was actually carried out by the energy assessor.   |   MHCLG|  2019-05-08   |
+|  lodgementdate |  Date lodged on the Energy Performance of Buildings Register.    |   MHCLG|  2019-05-08   |
+|  tfarea|  Total floor area: The total useful floor area is the total of all enclosed spaces measured to the internal face of the external walls, the gross floor area as measured in accordance with the guidance issued from time to time by the Royal Institute of Chartered Surveyors or by a body replacing that institution.   |   MHCLG|  46  |
+|  numberrooms |Number of habitable rooms: Habitable rooms include any living room, sitting room, dining room, bedroom, study and similar; and also a non-separated conservatory. A kitchen/diner having a discrete seating area (with space for a table and four chairs) also counts as a habitable room. A non-separated conservatory adds to the habitable room count if it has an internal quality door between it and the dwelling. Excluded from the room count are any room used solely as a kitchen, utility room, bathroom, cloakroom, en-suite accommodation and similar; any hallway, stairs or landing; and also any room not having a window     |   MHCLG|  2  |
+|  priceper|   House price per square metre   |   Authors' own  |  4070.652  |
 
 
 ***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
