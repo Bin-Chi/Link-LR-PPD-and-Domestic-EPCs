@@ -42,7 +42,7 @@ Domestic EPCs is open and available on-line from the Ministry for Housing, Commu
 Download NSPL (November 2019) from the Open Geography portal from the Office for National Statistics (ONS) (https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2019) and the save **NSPL_NOV_2019_UK.csv** in your D Device. Runing the **Read_NSPL.sql** to read in all the NSPL in **datajournal** database.
 
 ## 2. Data linkage
-A matching method containing a four-stage (251 matching rule) process was designed to achieve the address matching. An example of each matching rule is listed in  **linkage_example.csv**. The code for this linkage is **PPD_EPC_linkage.R**. Figure 2 display a screenshot of PPD_EPC_linkage R code. Utilizing this R code, two result data are achieve:
+A matching method containing a four-stage (251 matching rule) process was designed to achieve the address matching. An example of each matching rule is listed in  **linkage_example.csv**. The code for this linkage is **PPD_EPC_linkage.R**. Figure 2 displays a screenshot of PPD_EPC_linkage R code. Utilizing this R code, two result data are achieve:
 - ***casa*** is the all the linked results from the four stages matching
 - ***result2*** is linked result has the recent EPCs for each transaction , which refers the linked_EPC PPD in figure 1.  
  
