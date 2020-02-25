@@ -20,9 +20,12 @@ Process of setting working directory is listed below:
 - Create a directory named "R" in your D Device.
 - Create a sub-directory named "matchcasa1" in "R" folder.  
 - Put the **rulechi.csv** file in the "matchcasa1" folder.
-- Put the **geo1.csv** file in the "matchcasa1" folder.
+- Put the **Output_Area_2011_to_Builtup_Area_Subdivision_to_Builtup_Area_to_Local_Authority_District_to_Region_December_2011_Lookup_in_England_and_Wales.csv** file in the "matchcasa1" folder.
 
-***NOTE:*** If you would like to change your working directory, you also need to change the filepath of **setwd("D:/R/matchcasa1")** and **setwd("D:/R")** in the R code (PPD_EPC_linkage.R).
+***NOTE:*** 
+(1) If you would like to change your working directory, you also need to change the filepath of **setwd("D:/R/matchcasa1")** and **setwd("D:/R")** in the R code (PPD_EPC_linkage.R).
+(2) The resource of Output_Area_2011_to_Builtup_Area_Subdivision_to_Builtup_Area_to_Local_Authority_District_to_Region_December_2011_Lookup_in_England_and_Wales.csv is http://geoportal.statistics.gov.uk/datasets/output-area-2011-to-built-up-area-sub-division-to-built-up-area-to-local-authority-district-to-region-december-2011-lookup-in-england-and-wales
+.
 
 
 ### 1.3 Read in the Land Registry PPD in datajournal database
@@ -42,7 +45,7 @@ Download NSPL (November 2019) from the Open Geography portal from the Office for
 ## 2. Data linkage
 A matching method containing a four-stage (251 matching rule) process was designed to achieve the address matching. An example of each matching rule is listed in  **linkage_example.csv**. The code for this linkage is **PPD_EPC_linkage.R**. Figure 2 display a screenshot of PPD_EPC_linkage R code. Utilizing this R code, two result data are achieve:
 - ***casa*** is the all the linked results from the four stages matching
-- ***result2*** is linked result has the recent EPCs for each transaction , which refers the Linked_EPC PPD in figure 1.  
+- ***result2*** is linked result has the recent EPCs for each transaction , which refers the linked_EPC PPD in figure 1.  
  
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 2.** Snapshot of the PPD_EPC_linkage R code
