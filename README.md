@@ -20,9 +20,11 @@ Process of setting working directory is listed below:
 - Create a directory named "R" in your D Device.
 - Create a sub-directory named "matchcasa1" in "R" folder.  
 - Put the **rulechi.csv** file in the "matchcasa1" folder.
-- Put the **geo1.csv** file in the "matchcasa1" folder.
+- Put the **Output_Area_2011_to_Builtup_Area_Subdivision_to_Builtup_Area_to_Local_Authority_District_to_Region_December_2011_Lookup_in_England_and_Wales.csv** file in the "matchcasa1" folder.
 
-***NOTE:*** If you would like to change your working directory, you also need to change the filepath of **setwd("D:/R/matchcasa1")** and **setwd("D:/R")** in the R code (PPD_EPC_linkage.R).
+***NOTE:*** 
+-  If you would like to change your working directory, you also need to change the filepath of **setwd("D:/R/matchcasa1")** and **setwd("D:/R")** in the R code (PPD_EPC_linkage.R).
+-  The resource of **Output_Area_2011_to_Builtup_Area_Subdivision_to_Builtup_Area_to_Local_Authority_District_to_Region_December_2011_Lookup_in_England_and_Wales.csv** comes from the Open Geography portal( http://geoportal.statistics.gov.uk/datasets/output-area-2011-to-built-up-area-sub-division-to-built-up-area-to-local-authority-district-to-region-december-2011-lookup-in-england-and-wales ).
 
 
 ### 1.3 Read in the Land Registry PPD in datajournal database
@@ -40,12 +42,16 @@ Domestic EPCs is open and available on-line from the Ministry for Housing, Commu
 Download NSPL (November 2019) from the Open Geography portal from the Office for National Statistics (ONS) (https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2019) and the save **NSPL_NOV_2019_UK.csv** in your D Device. Runing the **Read_NSPL.sql** to read in all the NSPL in **datajournal** database.
 
 ## 2. Data linkage
-Run the **PPD_EPC_linkage.R**. A screenshot of PPD_EPC_linkage R code is shown in Figure 2. Utilizing this R code, two result data are achieve:
+A matching method containing a four-stage (251 matching rule) process was designed to achieve the address matching. An example of each matching rule is listed in  **linkage_example.csv**. The code for this linkage is **PPD_EPC_linkage.R**. Figure 2 displays a screenshot of PPD_EPC_linkage R code. Utilizing this R code, two result data are achieve:
 - ***casa*** is the all the linked results from the four stages matching
-- ***result2*** is linked result has the recent EPCs for each transaction , which refers the Linked_EPC PPD in figure 1.  
+- ***result2*** is linked result has the recent EPCs for each transaction , which refers the linked_EPC PPD in figure 1.  
  
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 2.** Snapshot of the PPD_EPC_linkage R code
+ 
+
+ 
+ 
 ## 3. Evaluation of the data linkage 
 Run the **Evaluation.R**. This section evaluates the performance of data linkage for idenitfy a time period which house price informaiton lost related small. It firstly investages overall annual match rate to choose an initial time period. Futher investagtion is conducted for the initial time period by investgate the data information lost before and after linkage with three mehtods( visualizatinon through the data distribution before and after linkege, K-S test and J-divergence method for the dataset before and after linkage). A final time period of the linked dataset are decided by consider the resutls of these three methods.
 ### 3.1 Annual match rate between 1995 and 2019 
@@ -82,17 +88,16 @@ The overall match rate for this period is 93.15%. The match rates for detached, 
 
 
 ## 5. User note for the linked data
-One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (id) allowing us to link properties within the EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. Table 2 shows the description of the   fields in the newly linked data.
+One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (id) allowing us to link properties within the EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. **tran2011_19_example.csv** is a sample  of the newly linked data. Table 2 shows the description of the fields in the newly linked data.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 2.** Explanations of information fields in the new attribute-linked residential property price dataset
- 
 
 
 | Field name | Explanation| Data resource | example|
 |  ---      |    ---       |     ---   |   ---    |
 |  id |  A unique identifier in Domestic EPCs   |    Authors' own |  10000000  |
 |  transactionid |  Transaction unique identifier    |  HM Land Registry   |   {5F2B8B60-B9D0-4F00-8561-8BBF0C991BE1}|
-|  msoa11 | The 2011 Census Middle Layer Super Output Area (MSOA) code     |   NSPL  |   E02006364 |
+| oa11  | The 2011 Census Output Area (OA) code  |   NSPL |  E00155821  |
 | postcode  |  Postcode information of the property    |  HM Land Registry   |   KT22 7LN |
 |  price |   Sale price (transfer deed)   |  HM Land Registry   | 187250   |
 | dateoftransfer  | Date when the sale was completed     |   HM Land Registry  | 2014-07-11   |
@@ -107,14 +112,14 @@ One final data set is associated with this work – the linked geo-referenced  P
 | district  |      |    HM Land Registry |  MOLE VALLEY  |
 | county  |      |    HM Land Registry |  SURREY  |
 | categorytype |  A = Standard Price Paid entry, includes single residential property sold for full market value    |    HM Land Registry |  A  |
-| crecordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |  A  |
+| recordstatus | Indicates additions, changes and deletions to the records: A = Addition; C = Change; D = Delete. |    HM Land Registry |  A  |
 |year |    Year when the sale was completed   |    Authors' own |  2014  |
-| oa11  | The 2011 Census Output Area (OA) code  |   NSPL |  E00155821  |
 |lsoa11   |  The 2011 Census Lower Layer Super Output Area (LSOA) code    |   NSPL |    E01030550 |
-|  laua |   The 2011 Census local authority district code   |   |  E07000210  |
-| ldnm  |     The 2011 Census local authority district name  |    |   Mole Valley |
-| RGN11NM   |  The 2011 Census region name    |     |   South East |
-| gor  |   The 2011 Census region district code  |     | E12000008   |
+|  msoa11 | The 2011 Census Middle Layer Super Output Area (MSOA) code     |   NSPL  |   E02006364 |
+|  laua |   The 2011 Census local authority district code   | Output Area (2011) to Built-up Area Sub-division to Built-up Area to Local Authority District to Region (December 2011) Lookup in England and Wales  |  E07000210  |
+| lad11nm  |     The 2011 Census local authority district name  |  Output Area (2011) to Built-up Area Sub-division to Built-up Area to Local Authority District to Region (December 2011) Lookup in England and Wales  |   Mole Valley |
+| gor  |   The 2011 Census region district code  |  Output Area (2011) to Built-up Area Sub-division to Built-up Area to Local Authority District to Region (December 2011) Lookup in England and Wales   | E12000008   |
+| rgn11nm  |  The 2011 Census region name    |   Output Area (2011) to Built-up Area Sub-division to Built-up Area to Local Authority District to Region (December 2011) Lookup in England and Wales  |   South East |
 | classt |Indicates for 1:1 and 1:n relationship of the linked data in the address mathcing.  11 refers to 1:1  relationship; 12 refers refers to 1:n relationship   |   Authors' own  |  12  |
 | propertytype_epc  |  Describes the type of property. e.g. Maisonette, Flat, House, Bungalow, Park home.    |   MHCLG |  Flat  |
 |  inspectiondate |   The date that the inspection was actually carried out by the energy assessor.   |   MHCLG|  2019-05-08   |
