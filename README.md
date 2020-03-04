@@ -28,7 +28,7 @@ Process of setting working directory is listed below:
 
 
 ### 1.3 Read in the Land Registry PPD in datajournal database
-Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
+Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Here we offer the used version of **pp-complete.csv** in UKDA ReShare(predicted DOI : https://dx.doi.org/10.5255/UKDA-SN-854240). Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
 
 ### 1.4 Read in Domestic EPCs in datajournal database
 Domestic EPCs is open and available on-line from the Ministry for Housing, Communities and Local Government - MHCLG (https://epc.opendatacommunities.org/). The current EPC dataset is the third released version and contains certificates issued between 1/10/2008 and 31/5/2019.The third version records 18,575,357 energy performance data records with 84 fields. 
