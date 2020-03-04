@@ -88,7 +88,7 @@ The overall match rate for this period is 93.15%. The match rates for detached, 
 
 
 ## 5. User note for the linked data
-One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (id) allowing us to link properties within the EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. **tran2011_19_example.csv** is a sample  of the newly linked data. It contains 105 fields writen in capital letter or small letter. All the fields written in capital letter comes from Domestic EPCs (MHCLG), the rest of the fields written in the small letter are described in Table 2.
+One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (id) and all the other non-address fields (except LMK_KEY field)in the Domestic EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. **tran2011_19_example.csv** is a sample  of the newly linked data. It contains 105 fields writen in capital letter or small letter. All the fields written in capital letter comes from Domestic EPCs (MHCLG), the rest of the fields written in the small letter are described in Table 2.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 2.** Explanations of important fields in the new attribute-linked residential property price dataset
 
@@ -132,6 +132,12 @@ One final data set is associated with this work – the linked geo-referenced  P
 ***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
 
 
+***User suggestions*** 
+Below is a bried description of the datasets in UKDA ReShare and user suggestion:
+- 
+- 
+- 
+- If you perfer to create a new linked data by yourself you need to download 
 ## 6. Acknowledgements
 
 The authors would like to thank David Lockett and Caroline Bray of Land Registry, who offered guidance on the Land Registry PPD. Thanks also to Jessica Williamson and Jake Mulley, who helped to transfer our questions on EPCs to the teams in MHCLG, allowing the authors to deepen their understanding of this data set at the end of this research. The authors also would like to thank Rob Liddiard of the UCL Energy Institute for sharing his expertise regarding EPC data during the earlier stages of this research.  
