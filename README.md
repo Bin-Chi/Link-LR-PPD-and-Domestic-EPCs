@@ -28,23 +28,23 @@ The process for setting the working directory is listed below:
 
 
 ### 1.3 Read the Land Registry PPD into datajournal database
-Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Here we offer the used version of **pp-complete.csv** in UKDA ReShare(predicted DOI : https://dx.doi.org/10.5255/UKDA-SN-854240). Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
+Download the Land Registry PPD from the UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D: drive. Here we offer the version used in this research of of **pp-complete.csv** in UKDA ReShare(predicted DOI : https://dx.doi.org/10.5255/UKDA-SN-854240). Runing the **Read_LR_PPD.sql** to read all the Land Registry PPD into **datajournal** database
 
 ### 1.4 Read in Domestic EPCs in datajournal database
-Domestic EPCs is open and available on-line from the Ministry for Housing, Communities and Local Government - MHCLG (https://epc.opendatacommunities.org/). The current EPC dataset is the third released version and contains certificates issued between 1/10/2008 and 31/5/2019.The third version records 18,575,357 energy performance data records with 84 fields. 
+The Domestic EPC dataset is open and available on-line from the Ministry for Housing, Communities and Local Government - MHCLG (https://epc.opendatacommunities.org/). The current EPC dataset is the third released version and contains certificates issued between 1/10/2008 and 31/5/2019.The third version records 18,575,357 energy performance data records with 84 fields. 
 
 
 ### 1.5 Clean up Land Registry PPD in datajournal database before linkage
- Runing the **Data_cleaning.sql** to clean up the transaction which are not sold in full market value or property type is 'Other'. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPCs dataset are selected for the following linkage; Domestic EPCs dataset with postcodes in Land Registry PPD are also selected for the following Linkage.
+ Run the **Data_cleaning.sql** to clean up the transactions which are not sold at full market value or for which the property type is 'Other'. Before matching, transactions in Land Registry PPD with postcodes in the Domestic EPC dataset are selected for using in the  following linkage (section 2); Domestic EPC dataset with postcodes in Land Registry PPD are also selected for using in the the following linkage (section 2).
 
 
 ### 1.6 Read in the National Statistics Postcode Lookup(NSPL) in datajournal database
-Download NSPL (November 2019) from the Open Geography portal from the Office for National Statistics (ONS) (https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2019) and the save **NSPL_NOV_2019_UK.csv** in your D Device. Runing the **Read_NSPL.sql** to read in all the NSPL in **datajournal** database.
+Download NSPL (November 2019) from the Open Geography portal of the Office for National Statistics (ONS) (https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2019) and save **NSPL_NOV_2019_UK.csv** in your D Drive. Run the **Read_NSPL.sql** to read the NSPL into **datajournal** database.
 
 ## 2. Data linkage
-A matching method containing a four-stage (251 matching rule) process was designed to achieve the address matching. An example of each matching rule is listed in  **linkage_example.csv**. The code for this linkage is **PPD_EPC_linkage.R**. Figure 2 displays a screenshot of PPD_EPC_linkage R code. Utilizing this R code, two result data are achieve:
-- ***casa*** is the all the linked results from the four stages matching
-- ***result2*** is linked result has the recent EPCs for each transaction , which refers the linked_EPC PPD in figure 1.  
+A matching method containing a four-stage (251 matching rule) process was designed to achieve the address matching. An example of each matching rule is listed in  **linkage_example.csv**. The code for this linkage is **PPD_EPC_linkage.R**. Figure 2 displays a screenshot of PPD_EPC_linkage R code. Utilizing this R code, two results are achieved:
+- ***casa*** is the linked results from the four stages matching
+- ***result2*** is the linked result with the recent EPC matched by transaction date for each transaction.It refers the linked_EPC PPD in figure 1.  
  
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 2.** Snapshot of the PPD_EPC_linkage R code
