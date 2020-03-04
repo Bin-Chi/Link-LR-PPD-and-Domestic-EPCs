@@ -131,13 +131,11 @@ One final data set is associated with this work – the linked geo-referenced  P
 
 ***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
 
-
-```User suggestions
-
-Below is a bried description of the datasets in UKDA ReShare and user suggestion:
-- 
-- 
-- 
+**User suggestions**
+```Below is a bried description of the datasets in UKDA ReShare and user suggestion:
+- tranall2011_19.csv is the newly linked data. example. This is the individual transaction data,which can be subset, aggregated directly basing on certains field.  R code for select  aggregate the data at region level 
+- epc_id.csv
+- pp-complete.csv is the Land Registry PPD download from GOV.UK wesite in November 14, 2019.
 - If you perfer to create a new linked data by yourself you need to download 
 ```
 ## 6. Acknowledgements
