@@ -135,7 +135,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 ```Below is a bried description of the datasets in UKDA ReShare and user suggestion:
 - tranall2011_19.csv is the newly linked data. example. This is the individual transaction data,which can be subset, aggregated directly basing on certains field.  R code for select  aggregate the data at region level 
 - epc_id.csv
-- pp-complete.csv is the Land Registry PPD download from GOV.UK wesite in November 14, 2019.
+- pp-complete.csv is the Land Registry PPD download from GOV.UK wesite in December 20, 2019.
 - If you perfer to create a new linked data by yourself you need to download 
 ```
 ## 6. Acknowledgements
