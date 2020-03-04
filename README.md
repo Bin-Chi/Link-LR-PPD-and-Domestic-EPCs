@@ -131,7 +131,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 
 ***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
 
-:dolphin: User suggestions:dolphin:
+:dolphin: **User suggestions:** :dolphin:
 
 Below is a brief description of the datasets in UKDA ReShare along with user suggestions:
 
