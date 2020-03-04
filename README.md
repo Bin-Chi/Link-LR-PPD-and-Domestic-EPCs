@@ -132,12 +132,14 @@ One final data set is associated with this work – the linked geo-referenced  P
 ***NOTE:*** Since for the address string of same property between Land Registry PPD and Domestic EPCs are sometime different (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
 
 
-***User suggestions*** 
+```User suggestions
+
 Below is a bried description of the datasets in UKDA ReShare and user suggestion:
 - 
 - 
 - 
 - If you perfer to create a new linked data by yourself you need to download 
+```
 ## 6. Acknowledgements
 
 The authors would like to thank David Lockett and Caroline Bray of Land Registry, who offered guidance on the Land Registry PPD. Thanks also to Jessica Williamson and Jake Mulley, who helped to transfer our questions on EPCs to the teams in MHCLG, allowing the authors to deepen their understanding of this data set at the end of this research. The authors also would like to thank Rob Liddiard of the UCL Energy Institute for sharing his expertise regarding EPC data during the earlier stages of this research.  
