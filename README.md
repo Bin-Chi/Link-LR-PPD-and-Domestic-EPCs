@@ -16,8 +16,8 @@ Create a new PostGIS database and named as **datajournal** (https://postgis.net/
 
 
 ### 1.2 Set the working directory for R
-Process of setting working directory is listed below:
-- Create a directory named "R" in your D Device.
+The process for setting the working directory is listed below:
+- Create a directory named "R" on your D: drive.
 - Create a sub-directory named "matchcasa1" in "R" folder.  
 - Put the **rulechi.csv** file in the "matchcasa1" folder.
 - Put the **Output_Area_2011_to_Builtup_Area_Subdivision_to_Builtup_Area_to_Local_Authority_District_to_Region_December_2011_Lookup_in_England_and_Wales.csv** file in the "matchcasa1" folder.
@@ -27,7 +27,7 @@ Process of setting working directory is listed below:
 -  The resource of **Output_Area_2011_to_Builtup_Area_Subdivision_to_Builtup_Area_to_Local_Authority_District_to_Region_December_2011_Lookup_in_England_and_Wales.csv** comes from the Open Geography portal( http://geoportal.statistics.gov.uk/datasets/output-area-2011-to-built-up-area-sub-division-to-built-up-area-to-local-authority-district-to-region-december-2011-lookup-in-england-and-wales ).
 
 
-### 1.3 Read in the Land Registry PPD in datajournal database
+### 1.3 Read the Land Registry PPD into datajournal database
 Download Land Registry PPD from UK goverment website (https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads) and  the save **pp-complete.csv** in your D Device. Here we offer the used version of **pp-complete.csv** in UKDA ReShare(predicted DOI : https://dx.doi.org/10.5255/UKDA-SN-854240). Runing the **Read_LR_PPD.sql** to read in all the Land Registry PPD in **datajournal** database
 
 ### 1.4 Read in Domestic EPCs in datajournal database
