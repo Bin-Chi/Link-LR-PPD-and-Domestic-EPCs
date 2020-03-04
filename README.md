@@ -53,7 +53,7 @@ A matching method containing a four-stage (251 matching rule) process was design
  
  
 ## 3. Evaluation of the data linkage 
-Run **Evaluation.R**. This process evaluates the performance of data linkage to idenitfy for which years information lost through data linkage are relatively small. It firstly investigates overall annual match rate to choose an initial time period. Futher investigation is conducted for the initial time period by iinvestigating the data information lost before and after linkage with three methods( visualization through the data distribution before and after linkage, K-S test and J-divergence method for the dataset before and after linkage). A final time period of the linked dataset is decided by considering the results of these three methods.
+Run **Evaluation.R**. This process evaluates the performance of data linkage to idenitfy for which years information loses through matching are relatively small. It firstly investigates overall annual match rate to choose an initial time period. Futher investigation is conducted for the initial time period by iinvestigating the data information lost before and after linkage with three methods( visualization through the data distribution before and after linkage, K-S test and J-divergence method for the dataset before and after linkage). A final time period of the linked dataset is decided by considering the results of these three methods.
 
 
 ### 3.1 Annual match rate between 1995 and 2019 
