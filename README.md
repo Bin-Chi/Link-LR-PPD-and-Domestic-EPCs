@@ -133,16 +133,16 @@ One final data set is associated with this work – the linked geo-referenced  P
 |  priceper|   House price per square metre   |   Authors' own  |  4070.652  |
 
 
-***NOTE:*** Since the address strings of same property between Land Registry PPD and Domestic EPCs are sometime different (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we only manual correct this mismatched address string for the property located in England between 1995 to 2016 in this datalinkage. This potential makes the match rate in Wales is relatively lower than it in England. We will correct this kind of mismatched situation in Wales in the future.
+***NOTE:*** Since the address strings for the same property in the Land Registry PPD and Domestic EPC dataset sometimes differ (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we manual;y correct this type of mismatch address string for the properties located in England between 1995 to 2016. This potentially makes the match rate in Wales relatively lower than in England. We will correct this kind of mismatch for Wales in the future.
 
 :dolphin: **User suggestions:** :dolphin:
 
 Below is a brief description of the datasets in UKDA ReShare along with user suggestions:
 
-- tranall2011_19.csv is the newly linked data in this project. This is the individual transaction data,which can be subset or aggregated directly basing on certains field. R code for tracing regional annual house price trends between 2011 and 2018 is offered (example.R), you will have an idea on how to read, subset, aggreate and plot the data;
+- tranall2011_19.csv is the newly linked data in this project. This is the individual transaction data,which can be subset or aggregated directly based on certain fields. R code for tracing regional annual house price trends between 2011 and 2018 is offered (example.R);
 - epc_id.csv is the Domestic EPCs data which delete LMK_KE, ADDRESS, ADDRESS1, ADDRESS2, ADDRESS3, INSPECTION_DATE, LODGEMENT_DATE, POSTCODE, PROPERTY_TYPE, TOTAL_FLOOR_AREA, NUMBER_HABITABLE_ROOMS fields. The new unique identifier (id) is included in the dataset;
 - pp-complete.csv is the Land Registry PPD download from GOV.UK website in December 20, 2019;
-- If you perfer to create a new linked data by yourself, you need to understand and accept the licence and copyright for the data and then download. We removed the address and postcode fields, which comes from EPCs, in the linked data to make sure this data is an open data. Please check your copyright notice when you used the address or postcode fields in EPCs dataset (https://epc.opendatacommunities.org/docs/copyright).
+- If you prefer to create a new linked data yourself, you need to understand and accept the licence and copyright for the data and then download. We removed the address and postcode fields (which comes from EPC dataset) in the linked data to make sure this data is an open data. Please check your copyright notice when you use the address or postcode fields in the EPC dataset (https://epc.opendatacommunities.org/docs/copyright).
 
 ## 6. Acknowledgements
 
