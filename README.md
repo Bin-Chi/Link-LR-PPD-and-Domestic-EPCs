@@ -92,7 +92,7 @@ The overall match rate for this period is 93.15%. The match rates for detached, 
 
 
 ## 5. User note for the linked data
-One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (id) and all the other non-address fields (except LMK_KEY field)in the Domestic EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. **tran2011_19_example.csv** is a sample  of the newly linked data. It contains 105 fields writen in capital letter or small letter. All the fields written in upper case come from Domestic EPCs (MHCLG), the remaining fields written in lower case are described in Table 2.
+One final data set is associated with this work – the linked geo-referenced  PPD dataset for January 2011 to October 2019. This new linked dataset details 5,732,838 transactions in England and Wales along with each property's total floor area and the number of habitable rooms, but also includes a new unique identifier (id) and all the other non-address fields (except LMK_KEY field) in the Domestic EPC dataset. Codes for other commonly used spatial units from Output Area (OA) to region are also included in the dataset. **tran2011_19_example.csv** is a sample  of the newly linked data. It contains 105 fields writen in capital letter or small letter. All the fields written in upper case come from Domestic EPCs (MHCLG), the remaining fields written in lower case are described in Table 2.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Table 2.** Explanations of important fields in the new attribute-linked residential property price dataset
 
@@ -140,9 +140,9 @@ One final data set is associated with this work – the linked geo-referenced  P
 Below is a brief description of the datasets in UKDA ReShare along with user suggestions:
 
 - tranall2011_19.csv is the newly linked data in this project. This is the individual transaction data,which can be subset or aggregated directly based on certain fields. R code for tracing regional annual house price trends between 2011 and 2018 is offered (example.R);
-- epc_id.csv is the Domestic EPCs data which delete LMK_KE, ADDRESS, ADDRESS1, ADDRESS2, ADDRESS3, INSPECTION_DATE, LODGEMENT_DATE, POSTCODE, PROPERTY_TYPE, TOTAL_FLOOR_AREA, NUMBER_HABITABLE_ROOMS fields. The new unique identifier (id) is included in the dataset;
+- epc_id.csv is the Domestic EPCs data which delete LMK_KE, **ADDRESS, ADDRESS1, ADDRESS2, ADDRESS3**, INSPECTION_DATE, LODGEMENT_DATE, **POSTCODE**, PROPERTY_TYPE, TOTAL_FLOOR_AREA, NUMBER_HABITABLE_ROOMS fields. The new unique identifier (id) is included in the dataset;
 - pp-complete.csv is the Land Registry PPD download from GOV.UK website in December 20, 2019;
-- If you prefer to create a new linked data yourself, you need to understand and accept the licence and copyright for the data and then download. We removed the address and postcode fields (which comes from EPC dataset) in the linked data to make sure this data is an open data. Please check your copyright notice when you use the address or postcode fields in the EPC dataset (https://epc.opendatacommunities.org/docs/copyright).
+-  **We removed the address and postcode fields (which comes from EPC dataset) in the linked data (tranall2011_19.csv) to make sure this data is an open data**. If you prefer to create a new linked data yourself, you need to understand and accept the licence and copyright for the data and then download.Please check your copyright notice when you use the address or postcode fields in the EPC dataset (https://epc.opendatacommunities.org/docs/copyright).
 
 ## 6. Acknowledgements
 
