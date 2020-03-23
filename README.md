@@ -133,7 +133,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 |  priceper|   House price per square metre   |   Authors' own  |  4070.652  |
 
 
-***NOTE:*** Since the address strings for the same property in the Land Registry PPD and Domestic EPC dataset sometimes differ (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we manual;y correct this type of mismatch address string for the properties located in England between 1995 to 2016. This potentially makes the match rate in Wales relatively lower than in England. We will correct this kind of mismatch for Wales in the future.
+***NOTE:*** Since the address strings for the same property in the Land Registry PPD and Domestic EPC dataset sometimes differ (e.g. 'WOODLANDS PARK' VS 'WOODLAND PARK'; 'CLEATOR STREET' VS 'CLEATER STREET'), we manualy correct this type of mismatch address string for the properties located in England between 1995 to 2016. This potentially makes the match rate in Wales relatively lower than in England. We will correct this kind of mismatch for Wales in the future.
 
 :dolphin: **User suggestions:** :dolphin:
 
