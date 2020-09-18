@@ -140,7 +140,7 @@ One final data set is associated with this work – the linked geo-referenced  P
 Below is a brief description of the datasets in UKDA ReShare along with user suggestions:
 
 - tranall2011_19.csv is the newly linked data in this project. This is the individual transaction data,which can be subset or aggregated directly based on certain fields. R code for tracing regional annual house price trends between 2011 and 2018 is offered (example.R);
-- epc_id.csv is the Domestic EPCs data which delete LMK_KE, **ADDRESS, ADDRESS1, ADDRESS2, ADDRESS3**, INSPECTION_DATE, LODGEMENT_DATE, **POSTCODE**, PROPERTY_TYPE, TOTAL_FLOOR_AREA, NUMBER_HABITABLE_ROOMS fields. The new unique identifier (id) is included in the dataset;
+- epc_id.csv is the Domestic EPCs data which delete LMK_KE, **ADDRESS, ADDRESS1, ADDRESS2, ADDRESS3**, **POSTCODE** fields. The new unique identifier (id) is included in the dataset;
 - pp-complete.csv is the Land Registry PPD download from GOV.UK website in December 20, 2019;
 -  **`We removed the address and postcode fields (which comes from EPC dataset) in the linked data (tranall2011_19.csv) to make sure this data is an open data `**. If you prefer to create a new linked data yourself, you need to understand and accept the licence and copyright for the data and then download. Please check your copyright notice when you use the address or postcode fields in the EPC dataset (https://epc.opendatacommunities.org/docs/copyright).
 
