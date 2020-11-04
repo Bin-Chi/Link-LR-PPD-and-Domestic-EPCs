@@ -2,7 +2,7 @@
 # Linking Land Registry Price Paid Data (PPD) and Domestic Energy Performance Certificates (EPCs)
 
 
-This project is the code part of authors' article which is accepted by Scientific Data in 3/7/2020. The linked dataset and codes are deposited in the UK Data Service, which have been published in 4/11/2020 (https://dx.doi.org/10.5255/UKDA-SN-854240). This research is **not** allowed to be used  **commercially**.
+This project is the code part of authors' article which was accepted by Scientific Data on the 3rd July 2020. The linked dataset and codes are deposited in the UK Data Service, which have been published in 4/11/2020 (https://dx.doi.org/10.5255/UKDA-SN-854240). This research is **not** allowed to be used  **commercially**.
 
 ## 1. Getting Started
 All matching rules were written in R with data inputs and outputs stored in a PostGIS database. Figure 1 displays the whole work flowchart.
@@ -153,5 +153,5 @@ The authors would like to thank David Lockett and Caroline Bray of Land Registry
 ## 7.Attribution statement
 Contains HM Land Registry data © Crown copyright and database right 2020. This data is licensed under the Open Government Licence v3.0.
 
-Postcode and address elements in the new data is subject to Royal Mail copyright, Royal Mail(address.management@royalmail.com) confirm this new data can be shared by both by Bin and UKDA with certain restrictions in 25/8/2020.
+Postcode and address elements in the new data are subject to Royal Mail copyright, Royal Mail(address.management@royalmail.com) confirmed on the 25th August 2020 that this new data can be shared by both by Bin Chi and UKDA with certain restrictions namely:
 >The data must be shared on the same terms as the data was originally obtained. These terms are set out in the URL links below, and if someone intends to use the data for purposes outside of this, then they must obtain permission from Royal Mail by contacting address.management@royalmail.com  (exactly as they would have to do if obtaining the data directly from the relevant Open Data government websites). Royal Mail will retain attribution rights to the addressing data in both Price Paid Data (PPD) and Energy Performance Certificate (EPC) data because the data includes addresses and Postcodes which are the intellectual property of Royal Mail because they originate from our Postcode Address File (PAF).What this means in practice is that when the data is (re)published the relevant PPD and EPC licence terms must be referenced as they are published on the relevant Open Data websites at https://epc.opendatacommunities.org/docs/copyright and https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads#address-data.
