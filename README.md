@@ -2,7 +2,7 @@
 # Linking Land Registry Price Paid Data (PPD) and Domestic Energy Performance Certificates (EPCs)
 
 
-This project is the code part of authors' article which is accepted in Scientific Data. The linked dataset and codes are deposited in the UK Data Service (https://dx.doi.org/10.5255/UKDA-SN-854240). This research is **not** allowed to be used  **commercially**.
+This project is the code part of authors' article which is accepted in Scientific Data. The linked dataset and codes are deposited in the UK Data Service, which have been published in 4/11/2020 (https://dx.doi.org/10.5255/UKDA-SN-854240). This research is **not** allowed to be used  **commercially**.
 
 ## 1. Getting Started
 All matching rules were written in R with data inputs and outputs stored in a PostGIS database. Figure 1 displays the whole work flowchart.
