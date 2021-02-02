@@ -4,7 +4,7 @@
 
 This project shows the code developed as part of the authors' article which was accepted by Scientific Data on the 3rd July 2020. The linked dataset and code are deposited in the UK Data Service, which have been published in 4/11/2020. Open access linkage codes in UKDA will allow for future updates beyond 2019. This research is **not** allowed to be used  **commercially**. 
 
-Scientific Data declined the publication in 11/11/2020 due to data is **open access** not the **open data** as they request, the manuscript is revised and submitted to another Journal. The linked dataset and codes are under a temporary embargo in UKDA. It will be published again once we it accepted of a new Journal.
+Scientific Data declined the publication in 11/11/2020 due to data is **open access** not the **open data** as they request.An article referring to this data is under review by UCL Open: Environment. The linked dataset and codes are under a temporary embargo in UKDA. It will be published again once it accepts by a new Journal.
 
 ## 1. Getting Started
 All matching rules were written in R with data inputs and outputs stored in a PostGIS database. Figure 1 displays the whole work flowchart.
