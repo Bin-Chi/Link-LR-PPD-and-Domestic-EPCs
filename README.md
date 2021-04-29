@@ -51,8 +51,9 @@ A matching method containing a four-stage (251 matching rule) process was design
 ![](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs/blob/master/Images/screenshot_of_linkage_code.png)
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  **Figure 2.** Snapshot of the PPD_EPC_linkage R code
  
+***NOTE:*** For each matching rule, users are able use the checkre1 function to get a ramdom 5 sample of the related linked result.
 
- 
+
  
 ## 3. Evaluation of the data linkage 
 Run **Evaluation.R**. This process evaluates the performance of data linkage to idenitfy for which years information loses through matching are relatively small. It firstly investigates overall annual match rate to choose an initial time period. Futher investigation is conducted for the initial time period by iinvestigating the data information lost before and after linkage with three methods( visualization through the data distribution before and after linkage, K-S test and J-divergence method for the dataset before and after linkage). A final time period of the linked dataset is decided by considering the results of these three methods.
