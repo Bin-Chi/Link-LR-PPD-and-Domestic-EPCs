@@ -4,7 +4,7 @@
 
 This project shows the code developed as part of the authors' article which was accepted by Scientific Data on the 3rd July 2020. The linked dataset and code are deposited with the UK Data Service, and wer published on 4/11/2020. Open access linkage codes in the UKDA (https://reshare.ukdataservice.ac.uk/854240/) will allow for future updates beyond 2019. This research is **not** allowed to be used  **commercially**. 
 
-Scientific Data declined the publication in 11/11/2020 due to data being **open access** rather than the **open data** as they request. Then article referring to this data is under open peer review by UCL Open: Environment(https://ucl.scienceopen.com/document?vid=1ee7f1fe-f6e5-4199-ac72-92a0ae3deaa4). The linked dataset and codes are under a temporary embargo in UKDA. It will be published again once they have been accepted by UCL Open: Environment.
+Scientific Data declined the publication in 11/11/2020 due to data being **open access** rather than the **open data** as they request. Then article referring to this data ihas now been published in UCL Open: Environment(https://dx.doi.org/10.14324/111.444/ucloe.000019). The linked dataset and codes are in UKDA. It will be published soon.For those who interested in the latest house price per square metre data, there will be one published by Greater London Authority (GLA).
 
 ## 1. Getting Started
 All matching rules were written in R with data inputs and outputs stored in a PostGIS database. Figure 1 displays the whole work flowchart.
